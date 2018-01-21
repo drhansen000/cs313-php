@@ -19,7 +19,7 @@
 <?php
     function checkFile($fileName)
     {
-        if ($_SERVER["SCRIPT_FILENAME"] == "/home/drhansen000/lappstack-5.6.32-1/apache2/htdocs/web/team/activity02/" . $fileName) 
+        if ($_SERVER["SCRIPT_FILENAME"] == "/home/drhansen000/lappstack-5.6.32-1/apache2/htdocs/cs313-php/web/team/activity02/" . $fileName) 
         {
             echo("active");
         }
