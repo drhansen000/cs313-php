@@ -1,0 +1,41 @@
+.active 
+{
+    background-color: limegreen;
+}
+.nav-item:hover
+{
+    background-color: darkgray;
+}
+body
+{
+    background-color: lightgray;
+}
+.navbar
+{
+    background-color: black;
+}
+#description
+{
+    margin-left: 8.16%;
+    margin-top: 60px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+#description ul
+{
+    list-style-type: none;
+}
+#description a
+{
+    color: white;
+    font-size: 20px;
+}
+
+
+@media only screen and (max-width:575px)
+{
+    #description { margin-top: 100px; }
+}
