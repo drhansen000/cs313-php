@@ -12,21 +12,21 @@
         <br>
       Major:<br>
         <?php 
-        $myMajor = array("CS"=>"Computer Science","WDD"=>"Wed Design Development","CIT"=>"Computer Information Technology","CE"=>"Computer Engineering");
-        foreach ($myMajor as $key => $value)
-            echo "<input type=\"radio\" name='major' value='$key'>$value<br>"
-            
+            $myMajor = array("CS"=>"Computer Science","WDD"=>"Wed Design and Development",
+                             "CIT"=>"Computer Information Technology","CE"=>"Computer Engineering");
+            foreach ($myMajor as $key => $value)
+                echo "<input type=\"radio\" name='major' value='$key'>$value<br>"
         ?>
       
         
         Continents visited:<br>
-      <input type="checkbox" name="visited[]" value="North America"> North America<br>
-      <input type="checkbox" name="visited[]" value="South America"> South America<br>
-      <input type="checkbox" name="visited[]" value="Europe"> Europe<br>
-      <input type="checkbox" name="visited[]" value="Asia"> Asia<br> 
-      <input type="checkbox" name="visited[]" value="Australia"> Australia<br>
-      <input type="checkbox" name="visited[]" value="Africa"> Africa<br>
-      <input type="checkbox" name="visited[]" value="Antarctica"> Antarctica<br>     
+      <input type="checkbox" name="visited[]" value="na"> North America<br>
+      <input type="checkbox" name="visited[]" value="sa"> South America<br>
+      <input type="checkbox" name="visited[]" value="e"> Europe<br>
+      <input type="checkbox" name="visited[]" value="as"> Asia<br> 
+      <input type="checkbox" name="visited[]" value="au"> Australia<br>
+      <input type="checkbox" name="visited[]" value="af"> Africa<br>
+      <input type="checkbox" name="visited[]" value="an"> Antarctica<br>     
         
         
         <br>
