@@ -7,10 +7,14 @@
 
 <!DOCTYPE html/>
 <html>
-<head></head>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="nabar.css"/>
+</head>
 <body>
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
         <ul class="navbar-nav">
+            <img class="navbar-brand" alt="HH&N Logo" src="images/green-black-logo.png"/>
             <li class="nav-item <?php if ($file === 'offer') echo 'active' ?>" >
                 <a class="nav-link" href="offer.php">What We Offer</a>
             </li>

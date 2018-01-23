@@ -1,0 +1,22 @@
+#first 
+{
+    color: red;
+    background: black;
+    margin: 0px;
+    padding: 20px;
+}
+#second 
+{
+    color: blue;
+    background: yellow;
+}
+
+#third 
+{
+    color: white;
+    background: green;
+}
+div:hover
+{
+    font-weight: bold;
+}

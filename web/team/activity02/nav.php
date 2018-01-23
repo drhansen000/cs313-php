@@ -5,6 +5,7 @@
         $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 ?>
 <link rel="stylesheet" type="text/css" href="../bootstrap-css/bootstrap.css">
+<!--<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">-->
 <nav class="navbar bg-dark navbar-expand-sm navbar-dark">
     <ul class="navbar-nav">
         <li class="nav-item <?php if ($file === 'home') echo 'active' ?>">
