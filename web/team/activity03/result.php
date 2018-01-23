@@ -1,30 +1,40 @@
 <html>
     <body>
-        Name: <?php echo $_POST["name"]; ?><br>
-        Email: <a href="mailto:<?php echo $_POST["email"]; ?>"><?php echo $_POST["email"]; ?></a><br>
-        Major: <?php echo(translateAbbreviation($_POST["major"])); ?><br>
-        Visited: 
-        <?php
-            //go for as long as the array
-            for ($i = 0; $i < count($_POST['visited']); $i++)
-            {
-                //only a checkbox is checked
-                if (isset($_POST['visited'][$i]))
+        <p>
+            Name: <?php echo $_POST["name"]; ?>
+        </p>
+        <p>
+            Email: <a href="mailto:<?php echo $_POST["email"]; ?>"><?php echo $_POST["email"]; ?></a>
+        </p>
+        <p>
+            Major: <?php echo(translateAbbreviation($_POST["major"])); ?>
+        </p>
+        <p>
+            Visited: 
+            <?php
+                //go for as long as the array
+                for ($i = 0; $i < count($_POST['visited']); $i++)
                 {
-                    //handle the last comma with if statements.
-                    if ($i < count($_POST['visited']) - 1)
+                    //only a checkbox is checked
+                    if (isset($_POST['visited'][$i]))
                     {
-                        echo(translateAbbreviation($_POST['visited'][$i]) . ", ");
-                    }
-                    else
-                    {
-                        echo(translateAbbreviation($_POST['visited'][$i]));
+                        //handle the last comma with if statements.
+                        if ($i < count($_POST['visited']) - 1)
+                        {
+                            echo(translateAbbreviation($_POST['visited'][$i]) . ", ");
+                        }
+                        else
+                        {
+                            echo(translateAbbreviation($_POST['visited'][$i]));
+                        }
                     }
                 }
-            }
-        ?><br>
-        <?php echo $_POST["comment"]; ?><br>
-        
+            ?>
+        </p>
+        <p>
+            Comments: 
+            <?php echo $_POST["comment"]; ?>
+        </p>
     </body>
 </html>
 
