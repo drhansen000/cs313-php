@@ -47,7 +47,11 @@ button:hover
 {
     cursor: pointer;
 }
-
+.navbar-right
+{
+    display: flex;
+    justify-content: flex-start;
+}
 
 
 @media only screen and (max-width:575px)

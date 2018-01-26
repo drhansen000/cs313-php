@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,7 +40,7 @@
                 <h5>Tea Tree Special: Shampoo</h5>
                 10.14 oz<br />
                 $15<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('TeaTreeShampoo' , 15)">Add to Cart</button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -802,3 +803,24 @@
     </div>
 </body>
 </html>
+
+<script>
+    function addToCart(itemName, itemPrice)
+    {
+        var httpRequest = new XMLHttpRequest();
+        alert(itemName + " " + itemPrice);
+        httpRequest.onreadystatechange = function () 
+        {
+            if (this.readyState == 4 && this.status == 200)
+            {
+            }
+            else if (this.readyState == 4) 
+            {
+                alert("Failure trying to open file to write. Status is: " + this.statusText);
+            }
+        };
+
+        httpRequest.open("POST","addToCart.php?itemName=" + itemName + "&itemPrice=" + itemPrice, true);
+        httpRequest.send();
+    }
+</script>

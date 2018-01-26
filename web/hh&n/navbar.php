@@ -1,4 +1,5 @@
 <?php
+    session_start();
         //This code was taken from Bro. Burton's team solution
         // From StackOverflow: http://stackoverflow.com/a/12201089/1932766
         // The second argument to pathinfo() strips the path and extension from the file name (PHP >= 5.2)
@@ -11,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="navbar.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
@@ -33,6 +34,14 @@
                 <li class="nav-item <?php if ($file === 'future') echo 'active' ?>" >
                         <a class="nav-link" href="future.php">Future Appointments</a>                
                 </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="nav-link" href="cart.php"><?php echo($_SESSION['numItems']); ?> In Cart</a>
+                </li>
+            
             </ul>
         </div>
     </nav>
