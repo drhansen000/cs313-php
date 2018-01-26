@@ -20,22 +20,24 @@
         <div class="col-6">
         Name of item(s):<br />
         <?php 
-    if(isset($_SESSION['itemName']) && !empty($_SESSION['itemName'])) 
-    {
-        echo 'Set and not empty, and no undefined index error!<br/>';
-        echo sizeof($_SESSION['itemName']) . "<br/>";
-    }
-    
+            $i;
             for ($i = 0; $i < sizeof($_SESSION['itemName']); $i++)
             {
                 echo($_SESSION['itemName'][$i] . "<br />");
-                echo("line " . $i);
             }
+            echo("Number of Items: $i");
             ?>
         </div>
         <div class="col-6">
             Price of item:<br />
-            <?php echo($_SESSION['itemPrice']); ?>
+            <?php
+                for ($i = 0; $i < sizeof($_SESSION['itemPrice']); $i++)
+                {
+                    echo('$' . $_SESSION['itemPrice'][$i] . "<br />");
+                    $total += $_SESSION['itemPrice'][$i];
+                }
+                echo("Total: $$total");
+            ?>
         </div>
     </div>
     <div class="col-2">

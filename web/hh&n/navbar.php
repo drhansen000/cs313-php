@@ -39,7 +39,9 @@
         <div>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="nav-link" href="cart.php"><?php echo($_SESSION['numItems']); ?> In Cart</a>
+                    <a id="numberInCart"class="nav-link" href="cart.php" value="<?php echo($_SESSION['numItems']); ?>">
+                        <?php echo($_SESSION['numItems']); ?> In Cart
+                    </a>
                 </li>
             
             </ul>

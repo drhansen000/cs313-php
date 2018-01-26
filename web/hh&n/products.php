@@ -808,11 +808,11 @@
     function addToCart(itemName, itemPrice)
     {
         var httpRequest = new XMLHttpRequest();
-        alert(itemName + " " + itemPrice);
         httpRequest.onreadystatechange = function () 
         {
             if (this.readyState == 4 && this.status == 200)
             {
+                alert(this.responseText);
             }
             else if (this.readyState == 4) 
             {
@@ -820,7 +820,8 @@
             }
         };
 
-        httpRequest.open("POST","addToCart.php?itemName=" + itemName + "&itemPrice=" + itemPrice, true);
-        httpRequest.send();
+        httpRequest.open("POST","addToCart.php", true);
+        httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        httpRequest.send("itemName=" + itemName + "&itemPrice=" + itemPrice);
     }
 </script>
