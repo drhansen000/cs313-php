@@ -59,7 +59,7 @@
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Tea Tea Tree Special: Hair and Scalp Treatment</h5>
-                	16.9 oz<br />
+                16.9 oz<br />
                 $20<br />
                 <button>Add to Cart</button><br />
             </div>
@@ -81,7 +81,7 @@
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Tea Tree Special: Aromatic Oil</h5>
-                	0.35 oz<br />
+                0.35 oz<br />
                 $10<br />
                 <button>Add to Cart</button><br />
             </div>
@@ -103,7 +103,7 @@
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Lemon Sage: Conditioner</h5>
-                	10.14 oz<br />
+                10.14 oz<br />
                 $15<br />
                 <button>Add to Cart</button><br />
             </div>
@@ -125,7 +125,7 @@
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Lavender Mint: Moisturizing Conditioner</h5>
-                	10.14 oz<br />
+                10.14 oz<br />
                 $15<br />
                 <button>Add to Cart</button><br />
             </div>
@@ -135,6 +135,57 @@
                 <h5>Lavender Mint: Conditioning Leave-In Spray</h5>
                 6.8 oz<br />
                 $18<br />
+                <button>Add to Cart</button><br />
+            </div>
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            </div>
+        </div>
+        <h3>MarulaOil</h3>
+        <p>
+		  This color safe shampoo replenishes hair with needed oils and helps 
+		  to protect hair against damage from heat and chemicals. The new 
+		  MarulaOil Light is for those with fine hair that could be weighed down 
+		  by the regular MarulaOil products. 
+        </p>
+        <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>MarulaOil: Rare Oil Replenishing Shampoo</h5>
+                7.5 oz<br />
+                $20<br />
+                <button>Add to Cart</button><br />
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="product-spec col-9 right" >
+                <h5>MarulaOil: Rare Oil Replenishing Conditioner</h5>
+                7.5 oz<br />
+                $25<br />
+                <button>Add to Cart</button><br />
+            </div>
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>MarulaOil Light: Rare Oil Volumizing Shampoo</h5>
+                24 oz<br />
+                $20<br />
+                <button>Add to Cart</button><br />
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="product-spec col-9 right" >
+                <h5>MarulaOil Light: Rare Oil Volumizing Conditioner</h5>
+                7.5 oz<br />
+                $25<br />
                 <button>Add to Cart</button><br />
             </div>
             <div class="col-3">
@@ -153,7 +204,7 @@
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Awapuhi Wild Ginger Repair: Moisturizing Lather Shampoo</h5>
-                	8.5 oz<br />
+                8.5 oz<br />
                 $15<br />
                 <button>Add to Cart</button><br />
             </div>
@@ -175,37 +226,12 @@
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Awapuhi Wild Ginger Repair: Keratin Intensive Treatment </h5>
-                	5.1 oz<br />
+                5.1 oz<br />
                 $20<br />
                 <button>Add to Cart</button><br />
             </div>
         </div>
-        <h3>MarulaOil</h3>
-        <p>
-		  This color safe shampoo replenishes hair with needed oils and helps 
-		  to protect hair against damage from heat and chemicals. The new 
-		  MarulaOil Light is for those with fine hair that could be weighed down 
-		  by the regular MarulaOil products. 
-        </p>
-	MarulaOil: Rare Oil Replenishing Shampoo
-	7.5 oz
-	$20
-			Add to Cart
-
-	MarulaOil: Rare Oil Replenishing Conditioner
-	7.5 oz
-	$25
-			Add to Cart
-
-	MarulaOil Light: Rare Oil Volumizing Shampoo
-	24 oz
-	$20
-			Add to Cart
-
-	MarulaOil Light: Rare Oil Volumizing Conditioner 
-	7.5 oz
-	$25
-			Add to Cart
+        
 
         <h2>Basic Needs</h2>
         <h3>Original</h3>
@@ -214,42 +240,78 @@
 		  You can’t go wrong with the classics and professional grade hair 
 		  products are always great quality. 
         </p>
-	Original: Awapuhi Shampoo
-	10.14 oz
-	$15
-			Add to Cart
-
-	Original: Shampoo One
-	10.14 oz
-	$15
-			Add to Cart
-
-	Original: The Conditioner 
-	3.4 oz
-	$10
-			Add to Cart
-
+        <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>Awapuhi Wild Ginger Repair: Moisturizing Lather Shampoo</h5>
+                8.5 oz<br />
+                $15<br />
+                <button>Add to Cart</button><br />
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="product-spec col-9 right" >
+                <h5>Original: Shampoo One</h5>
+                10.14 oz<br />
+                $15<br />
+                <button>Add to Cart</button><br />
+            </div>
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>Original: The Conditioner </h5>
+                3.4 oz<br />
+                $10<br />
+                <button>Add to Cart</button><br />
+            </div>
+        </div>
         <h3>Strength</h3>
         <p>
 		  The sad truth is that there are so many things that can damage and 
 		  weaken hair. The Strength products help to give your hair the nutrients 
 		  it needs to hold up against everything that could damage it. 
         </p>
-	Strength: Super Strong Shampoo
-	10.14 oz
-	$15
-			Add to Cart
-
-	Strength: Super Strong Conditioner 
-	10.14 oz
-	$15
-			Add to Cart
-
-	Strength: Super Strong Treatment 
-	6.8 oz
-	$10
-                         Add to Cart
-
+        <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>Strength: Super Strong Shampoo</h5>
+                10.14 oz<br />
+                $15<br />
+                <button>Add to Cart</button><br />
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="product-spec col-9 right" >
+                <h5>Strength: Super Strong Conditioner</h5>
+                10.14 oz<br />
+                $15<br />
+                <button>Add to Cart</button><br />
+            </div>
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>Strength: Super Strong Treatment </h5>
+                6.8 oz<br />
+                $10<br />
+                <button>Add to Cart</button><br />
+            </div>
+        </div>
         <h3>Color Care</h3>
         <p>
 		  Even though hair color and lightener have come a long way over the 
@@ -257,131 +319,249 @@
 		  from the look you want. The Color Care products protect your hair from 
 		  damage and also help to prevent the color you chose from fading. 
         </p>
-        <div>
-            Color Care: Color Protect Shampoo
-            10.14 oz
-            $15
-            <a href="#">Add to Cart</a>
+        <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>Color Care: Color Protect Shampoo</h5>
+                10.14 oz<br />
+                $15<br />
+                <button>Add to Cart</button><br />
+            </div>
         </div>
-	Color Care: Color Protect Conditioner 
-	10.14 oz
-	$15
-			Add to Cart
-
-	Color Care: Color Protect Reconstructive Treatment 
-	5.1 oz
-	$10
-			Add to Cart
-
-	Color Care: Color Protect Locking Spray
-	8.5 oz
-	$15
-	                Add to Cart
-
+        <div class="product-item col-12">
+            <div class="product-spec col-9 right" >
+                <h5>Color Care: Color Protect Conditioner</h5>
+                10.14 oz<br />
+                $15<br />
+                <button>Add to Cart</button><br />
+            </div>
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>Color Care: Color Protect Reconstructive Treatment</h5>
+                5.1 oz<br />
+                $10<br />
+                <button>Add to Cart</button><br />
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="product-spec col-9 right" >
+                <h5>Color Care: Color Protect Locking Spray</h5>
+                8.5 oz<br />
+                $15<br />
+                <button>Add to Cart</button><br />
+            </div>
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            </div>
+        </div>
         <h3>Moisture</h3>
         <p>
 		  Dry hair and scalp is one of the most common problems that people have. 
 		  These products are designed to give back the much needed moisture. 
         </p>
-	Moisture: Instant Moisture Shampoo
-	10.14 oz
-	$15
-	                 Add to Cart
-
-	Moisture: Instant Moisture Treatment
-	6.8 oz
-	$10
-	Add to Cart
-
-	Moisture: Super-Charged Moisturizer
-	6.8 oz
-	$10
-	Add to Cart
-
-	Moisture: Awapuhi Moisture Mist
-	16.9 oz
-	$20
-
-			Add to Cart
-
+        <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>Moisture: Instant Moisture Shampoo</h5>
+                10.14 oz<br />
+                $15<br />
+                <button>Add to Cart</button><br />
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="product-spec col-9 right" >
+                <h5>Moisture: Instant Moisture Treatment</h5>
+                6.8 oz<br />
+                $10<br />
+                <button>Add to Cart</button><br />
+            </div>
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>Moisture: Super-Charged Moisturizer</h5>
+                6.8 oz<br />
+                $10<br />
+                <button>Add to Cart</button><br />
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="product-spec col-9 right" >
+                <h5>Moisture: Awapuhi Moisture Mist</h5>
+                16.9 oz<br />
+                $20<br />
+                <button>Add to Cart</button><br />
+            </div>
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            </div>
+        </div>
         <h3>Kids</h3>
         <p>
 		  These carefully made products are designed for kids, which have 
 		  more delicate scalps. The shampoo will not sting if it happens to 
 		  run into their eyes and the detangler works wonders on knotted hair. 
         </p>
-	Kids: Baby Don’t Cry Shampoo 
-	10.14 oz
-	$10
-	Add to Cart
-
-	Kids: Taming Spray
-	8.5 oz
-        $8
-	Add to Cart
-
+        <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>Kids: Baby Don’t Cry Shampoo</h5>
+                10.14 oz<br />
+                $10<br />
+                <button>Add to Cart</button><br />
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="product-spec col-9 right" >
+                <h5>Kids: Taming Spray</h5>
+                8.5 oz<br />
+                $8<br />
+                <button>Add to Cart</button><br />
+            </div>
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            </div>
+        </div>
         <h3>Curls</h3>
         <p>
 		  The Curls line is made for those with natural curl. These products help 
 		  to make the curls manageable and reduce frizz. They also are a great 
 		  help with separating the curls for a beach wave style or classic style. 
         </p>
-	Curls: Spring Loaded Frizz-Fighting Shampoo
-	8.5 oz
-	$12
-	Add to Cart
-
-	Curls: Spring Loaded Frizz-Fighting Conditioner 
-	6.8 oz
-	$10
-			Add to Cart
-
-	Curls: Full Circle Leave-In Treatment 
-	6.8 oz
-	$10
-			Add to Cart
-
-	Curls: Ultimate Wave 
-	5.1 oz
-	$10
-			Add to Cart
-
-	Curls: Twirl Around
-	5.1 oz
-	$12
-			Add to Cart
-
+        <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>Curls: Spring Loaded Frizz-Fighting Shampoo</h5>
+                8.5 oz<br />
+                $12<br />
+                <button>Add to Cart</button><br />
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="product-spec col-9 right" >
+                <h5>Curls: Spring Loaded Frizz-Fighting Conditioner</h5>
+                6.8 oz<br />
+                $10<br />
+                <button>Add to Cart</button><br />
+            </div>
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>Curls: Full Circle Leave-In Treatment</h5>
+                6.8 oz<br />
+                $10<br />
+                <button>Add to Cart</button><br />
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="product-spec col-9 right" >
+                <h5>Curls: Ultimate Wave</h5>
+                5.1 oz<br />
+                $10<br />
+                <button>Add to Cart</button><br />
+            </div>
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>Curls: Twirl Around</h5>
+                5.1 oz<br />
+                $12<br />
+                <button>Add to Cart</button><br />
+            </div>
+        </div>
         <h3>Neuro Liquid</h3>
         <p>
 		  Neuro Liquid product are specially designed to protect hair from 
 		  thermal damage that happens with regular use of heat styling, such 
 		  as the use of hair dryers, curlers, flatterers, etc.
         </p>
-	Neuro Liquid: Lather (Shampoo)
-	9.2 oz
-	$20
-			Add to Cart
-
-	Neuro Liquid: Rinse (Conditioner)
-	9.2 oz
-	$20
-			Add to Cart
-
-	Neuro Liquid: Repair
-	5.1 oz
-	$12
-			Add to Cart
-
-	Neuro Liquid: Prime
-	4.7 oz
-	$12
-			Add to Cart
-
-	Neuro Liquid: Protect
-	6 oz
-	$15
-			Add to Cart
-
+        <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>Neuro Liquid: Lather (Shampoo)</h5>
+                9.2 oz<br />
+                $20<br />
+                <button>Add to Cart</button><br />
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="product-spec col-9 right" >
+                <h5>Neuro Liquid: Rinse (Conditioner)</h5>
+                9.2 oz<br />
+                $20<br />
+                <button>Add to Cart</button><br />
+            </div>
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            </div>
+        </div>
+	    <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>Neuro Liquid: Repair</h5>
+                5.1 oz<br />
+                $12<br />
+                <button>Add to Cart</button><br />
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="product-spec col-9 right" >
+                <h5>Neuro Liquid: Prime</h5>
+                4.7 oz<br />
+                $12<br />
+                <button>Add to Cart</button><br />
+            </div>
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>Neuro Liquid: Protect</h5>
+                6 oz<br />
+                $15<br />
+                <button>Add to Cart</button><br />
+            </div>
+        </div>
         <h2>Styling Needs</h2>
         <h3>Invisiblewear</h3>
         <p>
@@ -389,121 +569,233 @@
 		  beauty of the hair. This is mainly used for natural hair styles and it 
 		  often used for the “messy” look. 
         </p>
-	Invisiblewear: Shampoo
-	33.8 oz
-	$35
-			Add to Cart
-
-	Invisiblewear: Conditioner
-	10.14 oz
-	$15
-			Add to Cart
-
-	Invisiblewear: Boomerang Restyling Mist
-	8.5 oz
-	$12
-			Add to Cart
-
-	Invisiblewear: Blonde Dry Shampoo
-	4.7 oz
-	$10
-			Add to Cart
-
-	Invisiblewear: Brunette Dry Shampoo
-	4.7 oz
-	$10
-			Add to Cart
-
+        <div class="product-item col-12">
+            <div class="product-spec col-9 right" >
+                <h5>Invisiblewear: Shampoo</h5>
+                33.8 oz<br />
+                $35<br />
+                <button>Add to Cart</button><br />
+            </div>
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>Invisiblewear: Conditioner</h5>
+                10.14 oz<br />
+                $15<br />
+                <button>Add to Cart</button><br />
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="product-spec col-9 right" >
+                <h5>Invisiblewear: Boomerang Restyling Mist</h5>
+                8.5 oz<br />
+                $12<br />
+                <button>Add to Cart</button><br />
+            </div>
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>Invisiblewear: Blonde Dry Shampoo</h5>
+                4.7 oz<br />
+                $10<br />
+                <button>Add to Cart</button><br />
+            </div>
+        </div>
+	   <div class="product-item col-12">
+            <div class="product-spec col-9 right" >
+                <h5>Invisiblewear: Brunette Dry Shampoo</h5>
+                4.7 oz<br />
+                $10<br />
+                <button>Add to Cart</button><br />
+            </div>
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            </div>
+        </div>
         <h3>Neon</h3>
         <p>
 		  Neon is a product line geared mainly towards teens. The natural sugar 
 		  in the products help to give the hair a healthy shine and boost confidence. 
         </p>
-	Neon: Sugar Cleanse
-	10.14 oz
-	$12
-			Add to Cart
-
-	Neon: Sugar Twist
-	6.8 oz
-	$10
-			Add to Cart
-
-	Neon: Sugar Cream
-	6.8 oz
-	$10
-			Add to Cart
-
+        <div class="product-item col-12">
+            <div class="product-spec col-9 right" >
+                <h5>Neon: Sugar Cleanse</h5>
+                10.14 oz<br />
+                $12<br />
+                <button>Add to Cart</button><br />
+            </div>
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>Neon: Sugar Twist</h5>
+                6.8 oz<br />
+                $10<br />
+                <button>Add to Cart</button><br />
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="product-spec col-9 right" >
+                <h5>Neon: Sugar Cream</h5>
+                6.8 oz<br />
+                $10<br />
+                <button>Add to Cart</button><br />
+            </div>
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            </div>
+        </div>
         <h3>Smoothing</h3>
         <p>
 		  Super Skinny is one of the most popular of the Paul Mitchell products 
 		  that helps to keep hair shinny, smooth, and manageable. 
         </p>
-	Smoothing: Super Skinny Shampoo
-	10.14 oz
-	$15
-			Add to Cart
-
-	Smoothing: Super Skinny Treatment 
-	10.14 oz
-	$15
-			Add to Cart
-
-	Smoothing: Super Skinny Serum
-	5.1 oz
-	$15
-			Add to Cart
-
+        <div class="product-item col-12">
+            <div class="product-spec col-9 right" >
+                <h5>Smoothing: Super Skinny Shampoo</h5>
+                10.14 oz<br />
+                $15<br />
+                <button>Add to Cart</button><br />
+            </div>
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>Smoothing: Super Skinny Treatment</h5>
+                10.14 oz<br />
+                $15<br />
+                <button>Add to Cart</button><br />
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="product-spec col-9 right" >
+                <h5>Smoothing: Super Skinny Serum</h5>
+                5.1 oz<br />
+                $15<br />
+                <button>Add to Cart</button><br />
+            </div>
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            </div>
+        </div>
         <h3>Extra-Body</h3>
         <p>
 		  Extra-Body helps me to give volume to hair without weighing it down.
         </p>
-	Extra-Body: Shampoo
-	10.14 oz
-	$15
-			Add to Cart
-
-	Extra-Body: Rinse 
-	10.14 oz
-	$15
-			Add to Cart
-
-	Extra-Body: Boost
-	8.5 oz
-	$12
-			Add to Cart
-
-	Extra-Body: Firm Finishing Spray
-	3.8 oz
-	$12
-			Add to Cart
-
+        <div class="product-item col-12">
+            <div class="product-spec col-9 right" >
+                <h5>Extra-Body: Shampoo</h5>
+                10.14 oz<br />
+                $15<br />
+                <button>Add to Cart</button><br />
+            </div>
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>Extra-Body: Rinse</h5>
+                10.14 oz<br />
+                $15<br />
+                <button>Add to Cart</button><br />
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="product-spec col-9 right" >
+                <h5>Extra-Body: Boost</h5>
+                8.5 oz<br />
+                $12<br />
+                <button>Add to Cart</button><br />
+            </div>
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>Extra-Body: Firm Finishing Spray</h5>
+                3.8 oz<br />
+                $12<br />
+                <button>Add to Cart</button><br />
+            </div>
+        </div>
         <h3>Mitch</h3>
         <p>
 		This line of product is designed especially for men. 
         </p>
-	Mitch: Double Hitter
-	8.5 oz
-	$16
-			Add to Cart
-
-	Mitch: Hardwired
-	2.5 oz
-	$15
-			Add to Cart
-
-	Mitch: Reformer
-	3 oz
-	$18
-			Add to Cart
-
-	Mitch: Barber’s Classic
-	3 oz
-	$18
-			Add to Cart
-
-    
-    
+        <div class="product-item col-12">
+            <div class="product-spec col-9 right" >
+                <h5>Mitch: Double Hitter</h5>
+                8.5 oz<br />
+                $16<br />
+                <button>Add to Cart</button><br />
+            </div>
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>Mitch: Hardwired</h5>
+                2.5 oz<br />
+                $15<br />
+                <button>Add to Cart</button><br />
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="product-spec col-9 right" >
+                <h5>Mitch: Reformer</h5>
+                3 oz<br />
+                $18<br />
+                <button>Add to Cart</button><br />
+            </div>
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            </div>
+        </div>
+        <div class="product-item col-12">
+            <div class="col-3">
+                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+            </div>
+            <div class="product-spec col-9 left" >
+                <h5>Mitch: Barber’s Classic</h5>
+                3 oz<br />
+                $18<br />
+                <button>Add to Cart</button><br />
+            </div>
+        </div>
     </div>
     <div class="col-2">
         <img class="panel-image" src="images/side-plant.png" />

@@ -10,7 +10,6 @@
 {
     text-align: right;
 }
-
 .panel-image
 {
     position: fixed;
@@ -19,5 +18,15 @@
     margin-right: -15px;
     margin-top: 80px;
     width: 16.33%;
-/*    object-fit: contain;*/
 }
+.product-item
+{
+    border-color: gray;
+    border-bottom-style: solid;
+    border-top-style: solid;
+}
+p
+{
+    font-size: 18px;
+}
+
