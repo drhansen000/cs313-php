@@ -814,6 +814,7 @@
         {
             if (this.readyState == 4 && this.status == 200)
             {
+                //change number of items in navbar
                 document.getElementById("numberInCart").innerHTML = this.responseText + " In Cart";
             }
             else if (this.readyState == 4) 
@@ -821,8 +822,9 @@
                 alert("Failure trying to open file to write. Status is: " + this.statusText);
             }
         };
-
+        
         httpRequest.open("POST","addToCart.php", true);
+        //this is required for post method only
         httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         httpRequest.send("itemName=" + itemName + "&itemPrice=" + itemPrice);
     }
