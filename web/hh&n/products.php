@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php 
+    session_start(); 
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -812,7 +814,7 @@
         {
             if (this.readyState == 4 && this.status == 200)
             {
-                alert(this.responseText);
+                document.getElementById("numberInCart").innerHTML = this.responseText + " In Cart";
             }
             else if (this.readyState == 4) 
             {

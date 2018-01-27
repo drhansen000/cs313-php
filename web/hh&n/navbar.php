@@ -38,9 +38,24 @@
         </div>
         <div>
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a id="numberInCart"class="nav-link" href="cart.php" value="<?php echo($_SESSION['numItems']); ?>">
-                        <?php echo($_SESSION['numItems']); ?> In Cart
+                <li class="nav-item <?php if ($file === 'cart') echo 'active' ?>" >
+                    <a id="numberInCart" class="nav-link" href="cart.php" 
+                       value="<?php 
+                            if ($_SESSION['numItems']) {
+                                echo($_SESSION['numItems']);
+                            } else {
+                                $_SESSION['numItems'] = 0;
+                                echo $_SESSION['numItems'];
+                            }?>">
+                        <?php 
+                            if ($_SESSION['numItems']) {
+                                echo($_SESSION['numItems']);
+                            } else {
+                                $_SESSION['numItems'] = 0;
+                                echo $_SESSION['numItems'];
+                            }
+                        ?> 
+                        In Cart
                     </a>
                 </li>
             

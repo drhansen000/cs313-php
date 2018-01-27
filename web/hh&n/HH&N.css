@@ -56,7 +56,7 @@ button:hover
 
 @media only screen and (max-width:575px)
 {
-    .col-8
+    .col-8, .col-6
     {
         width: 100%;
     }
