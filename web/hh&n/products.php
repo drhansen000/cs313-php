@@ -20,7 +20,7 @@
     <div id="description" class="col-8">
         <h1>Product Store</h1>
         <h2>Quality Guaranteed</h2> 
-        <p>
+        <p id="TeaTree">
 		  I want to make sure that you have the best products available to you. 
 		  I sell many of the Paul Mitchell products including their luxury lines. 
 		  Paul Mitchell is a company that will always be only in the professional 
@@ -42,7 +42,9 @@
                 <h5>Tea Tree Special: Shampoo</h5>
                 10.14 oz<br />
                 $15<br />
-                <button onclick="addToCart('TeaTreeShampoo' , 15)">Add to Cart</button><br />
+                <button onclick="addToCart('Tea Tree Special: Shampoo' , 15)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -50,7 +52,9 @@
                 <h5>Tea Tree Special: Conditioner</h5>
                 16.9 oz<br />
                 $20<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Tea Tree Special: Conditioner' , 20)">
+                    Add to Cart
+                </button><br />
             </div>
             <div class="col-3">
                 <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
@@ -58,13 +62,15 @@
         </div>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Tea-Tree-Special-Hair-and-Scalp-Treatment.JPG">
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Tea Tea Tree Special: Hair and Scalp Treatment</h5>
                 16.9 oz<br />
                 $20<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Tea Tea Tree Special: Hair and Scalp Treatment' , 20)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -72,21 +78,25 @@
                 <h5>Tea Tree Special: Body Bar</h5>
                 53 oz<br />
                 $9<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Tea Tree Special: Body Bar' , 9)">
+                    Add to Cart
+                </button><br />
             </div>
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+                <img class="product-image" src="images/Tea-Tree-Special-Body-Bar.JPG">
             </div>
         </div>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Tea-Tree-Special-Aromatic-Oil.JPG">
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Tea Tree Special: Aromatic Oil</h5>
                 0.35 oz<br />
                 $10<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Tea Tree Special: Aromatic Oil' , 10)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -94,21 +104,25 @@
                 <h5>Lemon Sage: Shampoo</h5>
                 10.14 oz<br />
                 $15<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Lemon Sage: Shampoo' , 15)">
+                    Add to Cart
+                </button><br />
             </div>
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+                <img class="product-image" src="images/Lemon-Sage-Shampoo.JPG">
             </div>
         </div>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Lemon-Sage-Conditioner%20.PNG">
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Lemon Sage: Conditioner</h5>
                 10.14 oz<br />
                 $15<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Lemon Sage: Conditioner' , 15)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -116,21 +130,25 @@
                 <h5>Lavender Mint: Moisturizing Shampoo</h5>
                 10.14 oz<br />
                 $15<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Lavender Mint: Moisturizing Shampoo' , 15)">
+                    Add to Cart
+                </button><br />
             </div>
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+                <img class="product-image" src="images/Lavender-Mint-Moisturizing-Shampoo.JPG">
             </div>
         </div>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Lavender-Mint-Moisturizing-Conditioner.JPG">
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Lavender Mint: Moisturizing Conditioner</h5>
                 10.14 oz<br />
                 $15<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Lavender Mint: Moisturizing Conditioner' , 15)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -138,10 +156,12 @@
                 <h5>Lavender Mint: Conditioning Leave-In Spray</h5>
                 6.8 oz<br />
                 $18<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Lavender Mint: Conditioning Leave-In Spray' , 18)">
+                    Add to Cart
+                </button><br />
             </div>
-            <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            <div id="MarulaOil" class="col-3">
+                <img class="product-image" src="images/Lavender-Mint-Conditioning-Leave-In-Spray.JPG">
             </div>
         </div>
         <h3>MarulaOil</h3>
@@ -153,13 +173,15 @@
         </p>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/MarulaOil-Rare-Oil-Replenishing-Shampoo.PNG">
             </div>
             <div class="product-spec col-9 left" >
                 <h5>MarulaOil: Rare Oil Replenishing Shampoo</h5>
                 7.5 oz<br />
                 $20<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('MarulaOil: Rare Oil Replenishing Shampoo' , 20)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -167,21 +189,25 @@
                 <h5>MarulaOil: Rare Oil Replenishing Conditioner</h5>
                 7.5 oz<br />
                 $25<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('MarulaOil: Rare Oil Replenishing Conditioner' , 25)">
+                    Add to Cart
+                </button><br />
             </div>
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+                <img class="product-image" src="images/MarulaOil-Rare-Oil-Replenishing-Conditioner.PNG">
             </div>
         </div>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/MarulaOil-Light-Rare-Oil-Volumizing-Shampoo.PNG">
             </div>
             <div class="product-spec col-9 left" >
                 <h5>MarulaOil Light: Rare Oil Volumizing Shampoo</h5>
                 24 oz<br />
                 $20<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('MarulaOil Light: Rare Oil Volumizing Shampoo' , 20)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -189,10 +215,12 @@
                 <h5>MarulaOil Light: Rare Oil Volumizing Conditioner</h5>
                 7.5 oz<br />
                 $25<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('MarulaOil Light: Rare Oil Volumizing Conditioner' , 25)">
+                    Add to Cart
+                </button><br />
             </div>
-            <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            <div id="Awapuhi" class="col-3">
+                <img class="product-image" src="images/MarulaOil-Light-Rare-Oil-Volumizing-Conditioner.PNG">
             </div>
         </div>
         <h3>Awapuhi</h3>
@@ -203,13 +231,15 @@
         </p>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Awapuhi-Wild-Ginger-Repair-Moisturizing-Lather-Shampoo.JPG">
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Awapuhi Wild Ginger Repair: Moisturizing Lather Shampoo</h5>
                 8.5 oz<br />
                 $15<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Awapuhi Wild Ginger Repair: Moisturizing Lather Shampoo' , 15)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -217,21 +247,25 @@
                 <h5>Awapuhi Wild Ginger Repair: Keratin Cream Rinse</h5>
                 8.5 oz<br />
                 $15<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Awapuhi Wild Ginger Repair: Keratin Cream Rinse' , 15)">
+                    Add to Cart
+                </button><br />
             </div>
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+                <img class="product-image" src="images/Awapuhi-Wild-Ginger-Repair-Keratin-Cream-Rinse.JPG">
             </div>
         </div>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Awapuhi-Wild-Ginger-Repair-Keratin-Intensive-Treatment%20.PNG">
             </div>
-            <div class="product-spec col-9 left" >
-                <h5>Awapuhi Wild Ginger Repair: Keratin Intensive Treatment </h5>
+            <div id="Original" class="product-spec col-9 left" >
+                <h5>Awapuhi Wild Ginger Repair: Keratin Intensive Treatment</h5>
                 5.1 oz<br />
                 $20<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Awapuhi Wild Ginger Repair: Keratin Intensive Treatment' , 20)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         
@@ -245,13 +279,15 @@
         </p>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Original-Awapuhi-Shampoo.JPG">
             </div>
             <div class="product-spec col-9 left" >
-                <h5>Awapuhi Wild Ginger Repair: Moisturizing Lather Shampoo</h5>
-                8.5 oz<br />
+                <h5>Original: Awapuhi Shampoo</h5>
+                10.14 oz<br />
                 $15<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Awapuhi Wild Ginger Repair: Moisturizing Lather Shampoo' , 15)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -259,21 +295,25 @@
                 <h5>Original: Shampoo One</h5>
                 10.14 oz<br />
                 $15<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Original: Shampoo One' , 15)">
+                    Add to Cart
+                </button><br />
             </div>
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+                <img class="product-image" src="images/Original-Shampoo-One.JPG">
             </div>
         </div>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Original-The-Conditioner.JPG">
             </div>
-            <div class="product-spec col-9 left" >
-                <h5>Original: The Conditioner </h5>
+            <div id="Strength" class="product-spec col-9 left" >
+                <h5>Original: The Conditioner</h5>
                 3.4 oz<br />
                 $10<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Original: The Conditioner' , 10)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <h3>Strength</h3>
@@ -284,13 +324,15 @@
         </p>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Strength-Super-Strong-Shampoo.JPG">
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Strength: Super Strong Shampoo</h5>
                 10.14 oz<br />
                 $15<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Strength: Super Strong Shampoo' , 15)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -298,21 +340,25 @@
                 <h5>Strength: Super Strong Conditioner</h5>
                 10.14 oz<br />
                 $15<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Strength: Super Strong Conditioner' , 15)">
+                    Add to Cart
+                </button><br />
             </div>
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+                <img class="product-image" src="images/Strength-Super-Strong-Conditioner.JPG">
             </div>
         </div>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Strength-Super-Strong-Treatment.JPG">
             </div>
-            <div class="product-spec col-9 left" >
-                <h5>Strength: Super Strong Treatment </h5>
+            <div id="ColorCare" class="product-spec col-9 left" >
+                <h5>Strength: Super Strong Treatment</h5>
                 6.8 oz<br />
                 $10<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Strength: Super Strong Treatment' , 10)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <h3>Color Care</h3>
@@ -324,13 +370,15 @@
         </p>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Color-Care-Color-Protect-Shampoo.JPG">
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Color Care: Color Protect Shampoo</h5>
                 10.14 oz<br />
                 $15<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Color Care: Color Protect Shampoo' , 15)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -338,21 +386,25 @@
                 <h5>Color Care: Color Protect Conditioner</h5>
                 10.14 oz<br />
                 $15<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Color Care: Color Protect Conditioner' , 15)">
+                    Add to Cart
+                </button><br />
             </div>
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+                <img class="product-image" src="images/Color-Care-Color-Protect-Conditioner.JPG">
             </div>
         </div>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Color-Care-Color-Protect-Reconstructive-Treatment%20.JPG">
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Color Care: Color Protect Reconstructive Treatment</h5>
                 5.1 oz<br />
                 $10<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Color Care: Color Protect Reconstructive Treatment' , 10)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -360,10 +412,12 @@
                 <h5>Color Care: Color Protect Locking Spray</h5>
                 8.5 oz<br />
                 $15<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Color Care: Color Protect Locking Spray' , 15)">
+                    Add to Cart
+                </button><br />
             </div>
-            <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            <div id="Moisture" class="col-3">
+                <img class="product-image" src="images/Color-Care-Color-Protect-Locking-Spray.JPG">
             </div>
         </div>
         <h3>Moisture</h3>
@@ -373,13 +427,15 @@
         </p>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Moisture-Instant-Moisture-Shampoo.JPG">
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Moisture: Instant Moisture Shampoo</h5>
                 10.14 oz<br />
                 $15<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Moisture: Instant Moisture Shampoo' , 15)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -387,21 +443,25 @@
                 <h5>Moisture: Instant Moisture Treatment</h5>
                 6.8 oz<br />
                 $10<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Moisture: Instant Moisture Treatment' , 10)">
+                    Add to Cart
+                </button><br />
             </div>
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+                <img class="product-image" src="images/Moisture-Instant-Moisture-Treatment.JPG">
             </div>
         </div>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Moisture-Super-Charged-Moisturizer.JPG">
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Moisture: Super-Charged Moisturizer</h5>
                 6.8 oz<br />
                 $10<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Moisture: Super-Charged Moisturizer' , 10)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -409,10 +469,12 @@
                 <h5>Moisture: Awapuhi Moisture Mist</h5>
                 16.9 oz<br />
                 $20<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Moisture: Awapuhi Moisture Mist' , 20)">
+                    Add to Cart
+                </button><br />
             </div>
-            <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            <div id="Kids" class="col-3">
+                <img class="product-image" src="images/Moisture-Awapuhi-Moisture-Mist.JPG">
             </div>
         </div>
         <h3>Kids</h3>
@@ -423,13 +485,15 @@
         </p>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Kids-Baby-Don%E2%80%99t-Cry-Shampoo.JPG">
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Kids: Baby Don’t Cry Shampoo</h5>
                 10.14 oz<br />
                 $10<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Kids: Baby Don’t Cry Shampoo' , 10)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -437,10 +501,12 @@
                 <h5>Kids: Taming Spray</h5>
                 8.5 oz<br />
                 $8<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Kids: Taming Spray' , 8)">
+                    Add to Cart
+                </button><br />
             </div>
-            <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            <div id="Curls" class="col-3">
+                <img class="product-image" src="images/Kids-Taming-Spray.JPG">
             </div>
         </div>
         <h3>Curls</h3>
@@ -451,13 +517,15 @@
         </p>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Curls-Spring-Loaded-Frizz-Fighting-Shampoo.JPG">
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Curls: Spring Loaded Frizz-Fighting Shampoo</h5>
                 8.5 oz<br />
                 $12<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Curls: Spring Loaded Frizz-Fighting Shampoo' , 12)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -465,21 +533,25 @@
                 <h5>Curls: Spring Loaded Frizz-Fighting Conditioner</h5>
                 6.8 oz<br />
                 $10<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Curls: Spring Loaded Frizz-Fighting Conditioner' , 10)">
+                    Add to Cart
+                </button><br />
             </div>
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+                <img class="product-image" src="images/Curls-Spring-Loaded-Frizz-Fighting-Conditioner.JPG">
             </div>
         </div>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Curls-Full-Circle-Leave-In-Treatment.JPG">
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Curls: Full Circle Leave-In Treatment</h5>
                 6.8 oz<br />
                 $10<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Curls: Full Circle Leave-In Treatment' , 10)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -487,21 +559,25 @@
                 <h5>Curls: Ultimate Wave</h5>
                 5.1 oz<br />
                 $10<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Curls: Ultimate Wave' , 10)">
+                    Add to Cart
+                </button><br />
             </div>
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+                <img class="product-image" src="images/Curls-Ultimate-Wave.JPG">
             </div>
         </div>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Curls-Twirl-Around.JPG">
             </div>
-            <div class="product-spec col-9 left" >
+            <div id="NeuroLiquid" class="product-spec col-9 left" >
                 <h5>Curls: Twirl Around</h5>
                 5.1 oz<br />
                 $12<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Curls: Twirl Around' , 12)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <h3>Neuro Liquid</h3>
@@ -512,13 +588,15 @@
         </p>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Neuro-Liquid-Lather-(Shampoo).JPG">
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Neuro Liquid: Lather (Shampoo)</h5>
                 9.2 oz<br />
                 $20<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Neuro Liquid: Lather (Shampoo)' , 20)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -526,21 +604,25 @@
                 <h5>Neuro Liquid: Rinse (Conditioner)</h5>
                 9.2 oz<br />
                 $20<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Neuro Liquid: Rinse (Conditioner)' , 20)">
+                    Add to Cart
+                </button><br />
             </div>
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+                <img class="product-image" src="images/Neuro-Liquid-Rinse-(Conditioner).JPG">
             </div>
         </div>
 	    <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Neuro-Liquid-Repair.PNG">
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Neuro Liquid: Repair</h5>
                 5.1 oz<br />
                 $12<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Neuro Liquid: Repair' , 12)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -548,21 +630,25 @@
                 <h5>Neuro Liquid: Prime</h5>
                 4.7 oz<br />
                 $12<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Neuro Liquid: Prime' , 12)">
+                    Add to Cart
+                </button><br />
             </div>
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+                <img class="product-image" src="images/Neuro-Liquid-Prime.PNG">
             </div>
         </div>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Neuro-Liquid-Protect.PNG">
             </div>
-            <div class="product-spec col-9 left" >
+            <div id="Invisiblewear" class="product-spec col-9 left" >
                 <h5>Neuro Liquid: Protect</h5>
                 6 oz<br />
                 $15<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Neuro Liquid: Protect' , 15)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <h2>Styling Needs</h2>
@@ -577,21 +663,25 @@
                 <h5>Invisiblewear: Shampoo</h5>
                 33.8 oz<br />
                 $35<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Invisiblewear: Shampoo' , 35)">
+                    Add to Cart
+                </button><br />
             </div>
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+                <img class="product-image" src="images/Invisiblewear-Shampoo.JPG">
             </div>
         </div>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Invisiblewear-Conditioner.PNG">
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Invisiblewear: Conditioner</h5>
                 10.14 oz<br />
                 $15<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Invisiblewear: Conditioner' , 15)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -599,21 +689,25 @@
                 <h5>Invisiblewear: Boomerang Restyling Mist</h5>
                 8.5 oz<br />
                 $12<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Invisiblewear: Boomerang Restyling Mist' , 12)">
+                    Add to Cart
+                </button><br />
             </div>
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+                <img class="product-image" src="images/Invisiblewear-Boomerang-Restyling-Mist.JPG">
             </div>
         </div>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Invisiblewear-Blonde-Dry-Shampoo.JPG">
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Invisiblewear: Blonde Dry Shampoo</h5>
                 4.7 oz<br />
                 $10<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Invisiblewear: Blonde Dry Shampoo' , 10)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
 	   <div class="product-item col-12">
@@ -621,10 +715,12 @@
                 <h5>Invisiblewear: Brunette Dry Shampoo</h5>
                 4.7 oz<br />
                 $10<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Invisiblewear: Brunette Dry Shampoo' , 10)">
+                    Add to Cart
+                </button><br />
             </div>
-            <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            <div id="Neon" class="col-3">
+                <img class="product-image" src="images/Invisiblewear-Brunette-Dry-Shampoo.JPG">
             </div>
         </div>
         <h3>Neon</h3>
@@ -637,21 +733,25 @@
                 <h5>Neon: Sugar Cleanse</h5>
                 10.14 oz<br />
                 $12<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Neon: Sugar Cleanse' , 12)">
+                    Add to Cart
+                </button><br />
             </div>
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+                <img class="product-image" src="images/Neon-Sugar-Cleanse.JPG">
             </div>
         </div>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Neon-Sugar-Twist.JPG">
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Neon: Sugar Twist</h5>
                 6.8 oz<br />
                 $10<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Neon: Sugar Twist' , 10)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -659,10 +759,12 @@
                 <h5>Neon: Sugar Cream</h5>
                 6.8 oz<br />
                 $10<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Neon: Sugar Cream' , 10)">
+                    Add to Cart
+                </button><br />
             </div>
-            <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            <div id="Smoothing" class="col-3">
+                <img class="product-image" src="images/Neon-Sugar-Cream.JPG">
             </div>
         </div>
         <h3>Smoothing</h3>
@@ -675,21 +777,25 @@
                 <h5>Smoothing: Super Skinny Shampoo</h5>
                 10.14 oz<br />
                 $15<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Smoothing: Super Skinny Shampoo' , 15)">
+                    Add to Cart
+                </button><br />
             </div>
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+                <img class="product-image" src="images/Smoothing:%20Super%20Skinny%20Shampoo.JPG">
             </div>
         </div>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Smoothing-Super-Skinny-Treatment.JPG">
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Smoothing: Super Skinny Treatment</h5>
                 10.14 oz<br />
                 $15<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Smoothing: Super Skinny Treatment' , 15)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -697,10 +803,12 @@
                 <h5>Smoothing: Super Skinny Serum</h5>
                 5.1 oz<br />
                 $15<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Smoothing: Super Skinny Serum' , 15)">
+                    Add to Cart
+                </button><br />
             </div>
-            <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+            <div id="Extra-Body" class="col-3">
+                <img class="product-image" src="images/Smoothing-Super-Skinny-Serum.JPG">
             </div>
         </div>
         <h3>Extra-Body</h3>
@@ -712,21 +820,25 @@
                 <h5>Extra-Body: Shampoo</h5>
                 10.14 oz<br />
                 $15<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Extra-Body: Shampoo' , 15)">
+                    Add to Cart
+                </button><br />
             </div>
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+                <img class="product-image" src="images/Extra-Body-Shampoo.JPG">
             </div>
         </div>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Extra-Body-Rinse.JPG">
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Extra-Body: Rinse</h5>
                 10.14 oz<br />
                 $15<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Extra-Body: Rinse' , 15)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -734,21 +846,25 @@
                 <h5>Extra-Body: Boost</h5>
                 8.5 oz<br />
                 $12<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Extra-Body: Boost' , 12)">
+                    Add to Cart
+                </button><br />
             </div>
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+                <img class="product-image" src="images/Extra-Body-Boost.JPG">
             </div>
         </div>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Extra-Body-Firm-Finishing-Spray.JPG">
             </div>
-            <div class="product-spec col-9 left" >
+            <div id="Mitch" class="product-spec col-9 left" >
                 <h5>Extra-Body: Firm Finishing Spray</h5>
                 3.8 oz<br />
                 $12<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Extra-Body: Firm Finishing Spray' , 12)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <h3>Mitch</h3>
@@ -760,21 +876,25 @@
                 <h5>Mitch: Double Hitter</h5>
                 8.5 oz<br />
                 $16<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Mitch: Double Hitter' , 16)">
+                    Add to Cart
+                </button><br />
             </div>
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+                <img class="product-image" src="images/Mitch-Double-Hitter.JPG">
             </div>
         </div>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Mitch-Hardwired.JPG">
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Mitch: Hardwired</h5>
                 2.5 oz<br />
                 $15<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Mitch: Hardwired' , 15)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
         <div class="product-item col-12">
@@ -782,21 +902,25 @@
                 <h5>Mitch: Reformer</h5>
                 3 oz<br />
                 $18<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Mitch: Reformer' , 18)">
+                    Add to Cart
+                </button><br />
             </div>
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Conditioner.JPG">
+                <img class="product-image" src="images/Mitch-Reformer.JPG">
             </div>
         </div>
         <div class="product-item col-12">
             <div class="col-3">
-                <img class="product-image" src="images/Tea-Tree-Special-Shampoo.JPG">
+                <img class="product-image" src="images/Mitch-Barber-Classic.JPG">
             </div>
             <div class="product-spec col-9 left" >
                 <h5>Mitch: Barber’s Classic</h5>
                 3 oz<br />
                 $18<br />
-                <button>Add to Cart</button><br />
+                <button onclick="addToCart('Mitch: Barber’s Classic' , 18)">
+                    Add to Cart
+                </button><br />
             </div>
         </div>
     </div>

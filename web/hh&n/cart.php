@@ -30,8 +30,8 @@
                     
                 }
                 echo("\t<div class='col-12 itemSection'>\n<div class='nameList col-6'>" . $_SESSION['itemName'][$i] . "<br />\n");
-                echo("\t<button class='removeButton' onclick=removeFromCart('");
-                echo($_SESSION['itemName'][$i] . "')>Remove Item</button><br /></div>\n");
+                echo("\t<button class='removeButton' onclick=\"removeFromCart('");
+                echo($_SESSION['itemName'][$i] . "')\">Remove Item</button><br /></div>\n");
                 echo("\t<div class='priceList col-6'>$" . $_SESSION['itemPrice'][$i] . "<br /></div>");
                 $total += $_SESSION['itemPrice'][$i];
                 echo("\n</div>\n");

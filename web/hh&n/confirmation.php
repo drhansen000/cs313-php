@@ -20,7 +20,7 @@
         <img class="panel-image" src="images/side-plant.png"/>
     </div>
     <div id="description" class="col-8">
-        <h1>Thank you <?php echo($_POST['name']); ?></h1>
+        <h1>Thank you <?php echo(htmlspecialchars($_POST['name'])); ?></h1>
         <h3>The following <?php echo($_SESSION['plural']); ?> will be shipped to your address</h3>
         <?php 
             $i;
@@ -50,9 +50,10 @@
         <div class='col-12'>
             <div class="col-12">
                 <h3>Shipping Address</h3>
-                <?php echo($_POST['name']); ?><br/>
-                <?php echo($_POST['street']); ?><br/>
-                <?php echo($_POST['city'] . ", " . $_POST['state'] . " " . $_POST['zip']); ?><br/>
+                <?php echo(htmlspecialchars($_POST['name']) . "<br/>");
+                    echo(htmlspecialchars($_POST['street']) . "<br/>");
+                    echo(htmlspecialchars($_POST['city']) . ", ");
+                    echo(htmlspecialchars($_POST['state']) . " " . htmlspecialchars($_POST['zip'])); ?><br/>
             </div>
             <!--I don't know why I had to do this, but just surrounding the anchor tag with a button didn't work. I wasn't able 
                 To access it with CSS, unless it was inline, which we were told not to use, so...I used a form-->

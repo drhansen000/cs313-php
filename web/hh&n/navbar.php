@@ -26,9 +26,38 @@
                 <li class="nav-item <?php if ($file === 'offer') echo 'active' ?>" >
                     <a class="nav-link" href="offer.php">What We Offer</a>
                 </li>
-                <li class="nav-item <?php if ($file === 'products') echo 'active' ?>" >
+<!--
+                <li class="nav-item<?php if ($file === 'products') echo 'active' ?>" >
                     <a class="nav-link" href="products.php">Product Store</a>
                 </li>
+-->
+                <div class="btn-group">
+                  <li class="nav-item <?php if ($file === 'products') echo 'active' ?>" >
+                      <a class="nav-link" href="products.php">Product Store</a>
+<!--                </li>-->
+                  <a  class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </a>
+                  <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#TeaTree">Tea Tree</a>
+                      <a class="dropdown-item" href="#MarulaOil">Marula Oil</a>
+                      <a class="dropdown-item" href="#Awapuhi">Awapuhi</a>
+                      <a class="dropdown-item" href="#Original">Original</a>
+                      <a class="dropdown-item" href="#Strength">Strength</a>
+                      <a class="dropdown-item" href="#ColorCare">Color Care</a>
+                      <a class="dropdown-item" href="#Moisture">Moisture</a>
+                      <a class="dropdown-item" href="#Kids">Kids</a>
+                      <a class="dropdown-item" href="#Curls">Curls</a>
+                      <a class="dropdown-item" href="#NeuroLiquid">Neuro Liquid</a>
+                      <a class="dropdown-item" href="#Invisiblewear">Invisiblewear</a>
+                      <a class="dropdown-item" href="#Neon">Neon</a>
+                      <a class="dropdown-item" href="#Smoothing">Smoothing</a>
+                      <a class="dropdown-item" href="#Extra-Body">Extra-Body</a>
+                      <a class="dropdown-item" href="#Mitch">Mitch</a>
+                    <div class="dropdown-divider"></div>
+                  </div>
+                    </li>
+                </div>
                 <li class="nav-item <?php if ($file === 'previous') echo 'active' ?>" >
                         <a class="nav-link" href="previous.php">Previous Appointments</a>                
                 </li>

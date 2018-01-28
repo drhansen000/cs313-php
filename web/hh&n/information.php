@@ -70,17 +70,19 @@
                     </div>
                 </div>
                 <div class='title-sec  col-6'>
+                    <a href="cart.php">
+                        <button id="lookAlike" class="bottomButton" type="button">
+                        Return To Cart
+                        </button>
+                    </a>
+                </div>
+                <div class="input-sec col-6">
                 <button class="bottomButton" type="submit">
                     Complete Order
                 </button>
                 </div>
             </form>
             <div class='input-sec col-6'>
-            <form action="cart.php" method="post">
-                <button class="bottomButton" type="submit">
-                    Return To Cart
-                </button>
-            </form>
         </div>
         </div>
     </div>
