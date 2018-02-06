@@ -13,6 +13,10 @@ $dbPassword = $dbopts["pass"];
 $dbName = ltrim($dbopts["path"],'/');
 
 $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+foreach ($db->query('SELECT stuff FROM filler') as $row)
+{
+  echo 'stuff: ' . $row['stuff'];
+}
     
     //create variables to store posted data
     $itemName  = $_POST['itemName'];
