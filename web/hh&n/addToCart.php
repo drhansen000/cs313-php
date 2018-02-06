@@ -1,5 +1,18 @@
 <?php 
     session_start();
+
+    //connect to database and insert information
+$dbUrl = getenv('DATABASE_URL');
+
+$dbopts = parse_url($dbUrl);
+
+$dbHost = $dbopts["host"];
+$dbPort = $dbopts["port"];
+$dbUser = $dbopts["user"];
+$dbPassword = $dbopts["pass"];
+$dbName = ltrim($dbopts["path"],'/');
+
+$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
     
     //create variables to store posted data
     $itemName  = $_POST['itemName'];
