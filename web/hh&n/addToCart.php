@@ -1,6 +1,5 @@
 <?php 
     session_start();
-    
     //create variables to store posted data
     $itemName  = $_POST['itemName'];
     $itemPrice = $_POST['itemPrice']; 
