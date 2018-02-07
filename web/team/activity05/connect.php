@@ -16,7 +16,7 @@
     $dbPassword = $dbopts["pass"];
     $dbName = ltrim($dbopts["path"],'/');
 
-    $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=postgresql-horizontal-23451", $dbUser, $dbPassword);
+    $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
 ?>
 </html>
