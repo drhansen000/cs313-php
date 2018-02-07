@@ -6,7 +6,7 @@
     ini_set('display_errors', '1');
 
     //connect to the database via Heroku
-    $dbUrl = getenv('DATABASE_URL');
+    $dbUrl = getenv('HEROKU_POSTGRESQL_CRIMSON');
 
     $dbopts = parse_url($dbUrl);
 
