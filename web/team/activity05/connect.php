@@ -6,7 +6,7 @@
     ini_set('display_errors', '1');
 
     //connect to the database via Heroku
-    $dbUrl = getenv('HEROKU_POSTGRESQL_CRIMSON');
+    $dbUrl = getenv('DATABASE_URL');
 
     $dbopts = parse_url($dbUrl);
 
@@ -16,7 +16,7 @@
     $dbPassword = $dbopts["pass"];
     $dbName = ltrim($dbopts["path"],'/');
 
-    $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+    $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=CRIMSON", $dbUser, $dbPassword);
 
 ?>
 </html>
