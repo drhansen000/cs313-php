@@ -21,7 +21,7 @@
     </div>
     <div id="description" class="col-8">
         <h1>Thank you <?php echo(htmlspecialchars($_POST['name'])); ?></h1>
-        <h3>The following <?php echo($_SESSION['plural']); ?> will be shipped to your address</h3>
+        <h3>The following <?php echo($_SESSION['plural']); ?> will be available for pickup in 3 days</h3>
         <?php 
             $i;
             $total = 0;
@@ -46,23 +46,6 @@
             unset($_SESSION['itemPrice']);
             $_SESSION['numItems'] = 0;
             ?>
-        
-        <div class='col-12'>
-            <div class="col-12">
-                <h3>Shipping Address</h3>
-                <?php echo(htmlspecialchars($_POST['name']) . "<br/>");
-                    echo(htmlspecialchars($_POST['street']) . "<br/>");
-                    echo(htmlspecialchars($_POST['city']) . ", ");
-                    echo(htmlspecialchars($_POST['state']) . " " . htmlspecialchars($_POST['zip'])); ?><br/>
-            </div>
-            <!--I don't know why I had to do this, but just surrounding the anchor tag with a button didn't work. I wasn't able 
-                To access it with CSS, unless it was inline, which we were told not to use, so...I used a form-->
-            <form action="products.php" method="post">
-                <button class="bottomButton" type="submit">
-                    Back to Browsing
-                </button>
-            </form>
-        </div>
     </div>
     <div class="col-2">
         <img class="panel-image" src="images/side-plant.png"/>

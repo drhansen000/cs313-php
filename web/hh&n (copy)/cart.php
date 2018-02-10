@@ -49,9 +49,9 @@
             </form>
         </div>
         <div class='priceList col-6'>
-            <form action="confirmation.php" method="post">
+            <form action="information.php" method="post">
                 <button class="bottomButton" type="submit">
-                    Confirm Order
+                    Check Out
                 </button>
             </form>
         </div>

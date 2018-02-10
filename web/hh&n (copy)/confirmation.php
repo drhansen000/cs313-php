@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php 
+    session_start(); 
+    $_SESSION['numItems'] = 0;
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +12,7 @@
     <link rel="stylesheet" href="HH&N.css" />
     <link rel="stylesheet" href="cart.css"/>
     
-    <title>HH&N Products</title>
+    <title>Thank you</title>
 </head>
 <body>
     <?php include("navbar.php") ?>
@@ -17,7 +20,8 @@
         <img class="panel-image" src="images/side-plant.png"/>
     </div>
     <div id="description" class="col-8">
-        <h1>Your <?php  echo($_SESSION['plural']); ?></h1>
+        <h1>Thank you <?php echo(htmlspecialchars($_POST['name'])); ?></h1>
+        <h3>The following <?php echo($_SESSION['plural']); ?> will be shipped to your address</h3>
         <?php 
             $i;
             $total = 0;
@@ -25,33 +29,37 @@
             {
                 if ($i == 0)
                 {
-                    echo("<div class='nameList col-6'>Name of " . $_SESSION['plural'] . ":<br /></div>\n");
+                    echo("<div class='nameList col-6'>Name of " . $_SESSION['plural'] .":<br /></div>\n");
                     echo("\t<div class='priceList col-6'>Price of item:<br /></div>\n");
                     
                 }
-                echo("\t<div class='col-12 itemSection'>\n<div class='nameList col-6'>" . $_SESSION['itemName'][$i] . "<br />\n");
-                echo("\t<button class='removeButton' onclick=\"removeFromCart('");
-                echo($_SESSION['itemName'][$i] . "')\">Remove Item</button><br /></div>\n");
+                echo("\t<div class='col-12 itemSection'>\n<div class='nameList col-6'>");
+                echo($_SESSION['itemName'][$i] . "<br /></div>\n");
                 echo("\t<div class='priceList col-6'>$" . $_SESSION['itemPrice'][$i] . "<br /></div>");
                 $total += $_SESSION['itemPrice'][$i];
                 echo("\n</div>\n");
             }
-            echo("\t<div class='nameList col-6'>Number of Item(s): $i</div>\n");
+            echo("\t<div class='nameList col-6'>Number of " . $_SESSION['plural'] . ": $i</div>\n");
             echo("\t<div class='priceList col-6'>Total: $$total</div>\n");
+            //clear the contents
+            unset($_SESSION['itemName']);
+            unset($_SESSION['itemPrice']);
+            $_SESSION['numItems'] = 0;
             ?>
-        <div class='nameList col-6'>
+        
+        <div class='col-12'>
+            <div class="col-12">
+                <h3>Shipping Address</h3>
+                <?php echo(htmlspecialchars($_POST['name']) . "<br/>");
+                    echo(htmlspecialchars($_POST['street']) . "<br/>");
+                    echo(htmlspecialchars($_POST['city']) . ", ");
+                    echo(htmlspecialchars($_POST['state']) . " " . htmlspecialchars($_POST['zip'])); ?><br/>
+            </div>
             <!--I don't know why I had to do this, but just surrounding the anchor tag with a button didn't work. I wasn't able 
                 To access it with CSS, unless it was inline, which we were told not to use, so...I used a form-->
             <form action="products.php" method="post">
                 <button class="bottomButton" type="submit">
-                    Continue Browsing
-                </button>
-            </form>
-        </div>
-        <div class='priceList col-6'>
-            <form action="confirmation.php" method="post">
-                <button class="bottomButton" type="submit">
-                    Confirm Order
+                    Back to Browsing
                 </button>
             </form>
         </div>
@@ -61,25 +69,3 @@
     </div>
 </body>
 </html>
-
-<script>
-    function removeFromCart(itemName)
-    {
-        var httpRequest = new XMLHttpRequest();
-        httpRequest.onreadystatechange = function () 
-        {
-            if (this.readyState == 4 && this.status == 200)
-            {
-                location.reload();
-            }
-            else if (this.readyState == 4) 
-            {
-                alert("Failure trying to open file to write. Status is: " + this.statusText);
-            }
-        };
-
-        httpRequest.open("POST","removeFromCart.php", true);
-        httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        httpRequest.send("itemName=" + itemName);
-    }
-</script>
