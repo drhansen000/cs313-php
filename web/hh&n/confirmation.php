@@ -20,7 +20,7 @@
         <img class="panel-image" src="images/side-plant.png"/>
     </div>
     <div id="description" class="col-8">
-        <h1>Thank you <?php echo(htmlspecialchars($_POST['name'])); ?></h1>
+        <h1>Thank you</h1>
         <h3>The following <?php echo($_SESSION['plural']); ?> will be available for pickup in 3 days</h3>
         <?php 
             $i;
@@ -41,10 +41,11 @@
             }
             echo("\t<div class='nameList col-6'>Number of " . $_SESSION['plural'] . ": $i</div>\n");
             echo("\t<div class='priceList col-6'>Total: $$total</div>\n");
+        
             //clear the contents
             unset($_SESSION['itemName']);
             unset($_SESSION['itemPrice']);
-            $_SESSION['numItems'] = 0;
+            
             ?>
     </div>
     <div class="col-2">

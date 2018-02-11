@@ -782,7 +782,7 @@
                 </button><br />
             </div>
             <div class="col-3">
-                <img class="product-image" src="images/SmoothingSuperSkinnyShampoo.JPG">
+                <img class="product-image" src="images/Smoothing-Super-Skinny-Shampoo.JPG">
             </div>
         </div>
         <div class="product-item col-12">

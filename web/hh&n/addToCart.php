@@ -5,15 +5,18 @@
     $itemPrice = $_POST['itemPrice']; 
     
     //if there is no array, create one
-    if (!is_array($_SESSION['itemName']) && !is_array($_SESSION['itemPrice']))
+    if (!is_array($_SESSION['itemName']) || !is_array($_SESSION['itemPrice']))
     {
-        $_SESSION['itemName'] = array();
-        $_SESSION['itemPrice'] = array();
+        $_SESSION['itemName']    = array();
+        $_SESSION['itemPrice']   = array();
+        $_SESSION['itemPicture'] = array();
+        $_SESSION['itemSize']    = array();
     }
 
     //add the item to array
     array_push($_SESSION['itemName'], $itemName);
     array_push($_SESSION['itemPrice'], $itemPrice);
+
     $_SESSION['numItems'] = sizeof($_SESSION['itemName']);
 
     //singular or plural tense

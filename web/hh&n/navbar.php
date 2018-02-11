@@ -4,6 +4,7 @@
         // From StackOverflow: http://stackoverflow.com/a/12201089/1932766
         // The second argument to pathinfo() strips the path and extension from the file name (PHP >= 5.2)
         $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
+        include("connect.php");
 ?>
 
 <!DOCTYPE html/>
@@ -26,15 +27,9 @@
                 <li class="nav-item <?php if ($file === 'offer') echo 'active' ?>" >
                     <a class="nav-link" href="offer.php">What We Offer</a>
                 </li>
-<!--
-                <li class="nav-item<?php if ($file === 'products') echo 'active' ?>" >
-                    <a class="nav-link" href="products.php">Product Store</a>
-                </li>
--->
                 <div class="btn-group">
                   <li class="nav-item <?php if ($file === 'products') echo 'active' ?>" >
                       <a class="nav-link" href="products.php">Product Store</a>
-<!--                </li>-->
                   <a  class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="sr-only">Toggle Dropdown</span>
                   </a>
@@ -59,7 +54,7 @@
                     </li>
                 </div>
                 <li class="nav-item <?php if ($file === 'previous') echo 'active' ?>" >
-                        <a class="nav-link" href="previous.php">Previous Appointments</a>                
+                        <a class="nav-link" href="previous.php">Activity History</a>                
                 </li>
                 <li class="nav-item <?php if ($file === 'future') echo 'active' ?>" >
                         <a class="nav-link" href="future.php">Future Appointments</a>                
@@ -68,6 +63,20 @@
         </div>
         <div>
             <ul class="nav navbar-nav navbar-right">
+                     <?php 
+                        if (isset($_SESSION['name'])) {
+                            echo('<li id="welcome" class="nav-item" style="color: limegreen;">Welcome ' . $_SESSION['name'] . '</li>');
+                        } 
+                    ?>
+               <li class="nav-item <?php if ($file === 'login' || $file == 'signup') echo 'active' ?>" >
+                    <?php 
+                        if (isset($_SESSION['name'])) {
+                            echo('<a class="nav-link" href="logout.php">Logout</a>');
+                        } else {
+                            echo('<a class="nav-link" href="login.php">Login/SignUp</a>');
+                        }
+                    ?>
+                </li>
                 <li class="nav-item <?php if ($file === 'cart') echo 'active' ?>" >
                     <a id="numberInCart" class="nav-link" href="cart.php" 
                        value="<?php 

@@ -12,3 +12,6 @@ li
     align-items: center;
     font-size: 18px;
 }
+#welcome:hover {
+    background: black;
+}
