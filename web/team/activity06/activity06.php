@@ -1,4 +1,4 @@
-<?php include("connect.php") ?>
+<?php include("connect.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,12 +20,11 @@
             $stmt2 = $db->prepare('SELECT name FROM topic');
             $stmt2->execute();
             $topics = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-
             foreach ($topics AS $topic) {
                 echo('<input type="checkbox" name="topic[]" value="' . $topic['name'] . '">' . $topic['name'] . '</input><br/>');
             }
         ?>
-        <input type="submit" value="search"/>
+        <input type="submit" value="Add Scripture"/>
     </form>
 </body>
 </html>
