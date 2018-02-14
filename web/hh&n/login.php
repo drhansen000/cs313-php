@@ -48,6 +48,7 @@
         //is this secure?
         var email       = document.getElementById("emailInput").value;
         var password    = document.getElementById("passwordInput").value;
+        
         httpRequest.onreadystatechange = function () 
         {
             if (this.readyState == 4 && this.status == 200)
@@ -56,6 +57,7 @@
                     window.location.href = "offer.php";
                 } else {
                     document.getElementById("errorMessage").style.visibility = "visible";
+                    alert(this.responseText);
                 }
             }
             else if (this.readyState == 4) 

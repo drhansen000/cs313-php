@@ -26,10 +26,12 @@
                     echo('<div class="col-12 service">');
                     echo('<h5>Service: ' . $_SESSION['service'][$i] . '</h5>');
                     echo('Planned for ' . $_SESSION['serviceDate'][$i] . ' at ' . $_SESSION['serviceTime'][$i] . '<br/>');
+                    echo('Stylist ' . $_SESSION['serviceProvider'][$i] . '<br/>');
                     echo('Cost $' . $_SESSION['serviceCost'][$i] . '</div>');
                 }
             }
             ?>
+                <button onclick="window.location.href = 'availability.php'" type="button">Create Future Appointment</button>
         </div>
     </div>
     <div class="col-2">

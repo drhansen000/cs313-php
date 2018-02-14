@@ -20,7 +20,10 @@
     $_SESSION['serviceProvider'] = array();
 
     //fill in the session variables and return true if email & password match in db, else return false
-    $statement = $db->query("SELECT name, id FROM person WHERE email = '$email' AND password = '$userPassword'");
+    $statement = $db->prepare("SELECT name, id FROM person WHERE email =:theEmail AND password =:thePass");
+    $statement->bindValue(':theEmail', $email, PDO::PARAM_STR);
+    $statement->bindValue(':thePass', $userPassword, PDO::PARAM_STR);
+    $statement->execute();
     if ($row = $statement->fetch(PDO::FETCH_ASSOC))
     {
         $_SESSION['name'] = $row['name'];
@@ -48,7 +51,7 @@
     }
 
     //create and execute PDO for services
-    $stmt2 = $db->prepare('SELECT service, date, time, cost FROM service JOIN appointment ON service.id = appointment.serviceID JOIN person ON person.id = appointment.customerID WHERE person.id=:theid');
+    $stmt2 = $db->prepare('SELECT employee.name, service, date, time, cost FROM service JOIN appointment ON service.id = appointment.serviceID JOIN person AS employee ON employee.id = appointment.employeeID JOIN person AS customer ON customer.id = appointment.customerID WHERE customer.id=:theid');
     $stmt2->bindValue(':theid', $customerId, PDO::PARAM_INT);
     $stmt2->execute();
     $services = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -60,5 +63,6 @@
         array_push($_SESSION['serviceDate'], $service['date']);
         array_push($_SESSION['serviceTime'], $service['time']);
         array_push($_SESSION['serviceCost'], $service['cost']);
+        array_push($_SESSION['serviceProvider'], $service['name']);
     }
 ?>

@@ -26,7 +26,8 @@
                     echo('<div class="col-12 service">');
                     echo('<h5>Service: ' . $_SESSION['service'][$i] . '</h5>');
                     echo('Received on ' . $_SESSION['serviceDate'][$i] . ' at ' . $_SESSION['serviceTime'][$i] . '<br/>');
-                    echo('Cost $' . $_SESSION['serviceCost'][$i] . '</div>');
+                    echo('Stylist ' . $_SESSION['serviceProvider'][$i] . '<br/>');
+                    echo(' Cost $' . $_SESSION['serviceCost'][$i] . '</div>');
                 }
             }
             ?>
@@ -51,18 +52,3 @@
     </div>
 </body>
 </html>
-
-<!--
-<div class="product-item col-12">
-            <div class="col-3">
-                <img class="product-image" src="images/Mitch-Barber-Classic.JPG">
-            </div>
-            <div class="product-spec col-9 left" >
-                <h5>Mitch: Barber’s Classic</h5>
-                3 oz<br />
-                $18<br />
-                <button onclick="addToCart('Mitch: Barber’s Classic' , 18)">
-                    Add to Cart
-                </button><br />
-            </div>
-        </div>-->
