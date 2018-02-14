@@ -57,7 +57,6 @@
                     window.location.href = "offer.php";
                 } else {
                     document.getElementById("errorMessage").style.visibility = "visible";
-                    alert(this.responseText);
                 }
             }
             else if (this.readyState == 4) 
