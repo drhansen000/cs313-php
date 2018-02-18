@@ -3,27 +3,6 @@
 
     //connect to the database
     include("connect.php");
-
-    //create the session arrays for purchased products
-    $_SESSION['pastItemName']    = array();
-    $_SESSION['pastItemPrice']   = array();
-    $_SESSION['pastItemPicture'] = array();
-    $_SESSION['pastItemSize']    = array();
-
-    //create and execute PDO for purchased products
-    $stmt = $db->prepare('SELECT product.name, size, price, picture FROM product JOIN purchaseHistory ON product.id = purchaseHistory.productid JOIN person ON person.id = purchaseHistory.personid WHERE person.id=:theid');
-    $stmt->bindValue(':theid', $_SESSION['userId'], PDO::PARAM_INT);
-    $stmt->execute();
-    $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-    //push in the values into purchased products session variables
-    foreach ($products as $product)
-    {
-        array_push($_SESSION['pastItemName'], $product['name']);
-        array_push($_SESSION['pastItemPrice'], $product['price']);
-        array_push($_SESSION['pastItemPicture'], $product['picture']);
-        array_push($_SESSION['pastItemSize'], $product['size']);
-    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -83,6 +62,27 @@
             $_SESSION['numItems'] = 0;
             unset($_SESSION['itemName']);
             unset($_SESSION['itemPrice']);
+            
+            //create the session arrays for purchased products
+            $_SESSION['pastItemName']    = array();
+            $_SESSION['pastItemPrice']   = array();
+            $_SESSION['pastItemPicture'] = array();
+            $_SESSION['pastItemSize']    = array();
+
+            //create and execute PDO for purchased products
+            $stmt = $db->prepare('SELECT product.name, size, price, picture FROM product JOIN purchaseHistory ON product.id = purchaseHistory.productid JOIN person ON person.id = purchaseHistory.personid WHERE person.id=:theid');
+            $stmt->bindValue(':theid', $_SESSION['userId'], PDO::PARAM_INT);
+            $stmt->execute();
+            $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            //push in the values into purchased products session variables
+            foreach ($products as $product)
+            {
+                array_push($_SESSION['pastItemName'], $product['name']);
+                array_push($_SESSION['pastItemPrice'], $product['price']);
+                array_push($_SESSION['pastItemPicture'], $product['picture']);
+                array_push($_SESSION['pastItemSize'], $product['size']);
+            }
         }
         else
         {
