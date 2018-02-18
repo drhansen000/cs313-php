@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="col.css" />
     <link rel="stylesheet" href="HH&N.css" />
     <link rel="stylesheet" href="login.css"/>
-    <title>Login</title>
+    <title>HH&N Signup</title>
 </head>
 <body>
     <?php include("navbar.php") ?>
@@ -17,25 +17,26 @@
     </div>    
     <div id="description" class="col-8">
         <h1>Create your account</h1>
-        <form onsubmit="#" >
+        <form action="accountCreated.php" method="post">
             <p>Full Name</p>
             <div class="col-12">
-                <input type="text" />
+                <input type="text" name="userName" required/>
             </div>
             <p>Email address</p>
             <div class="col-12" >
-                <input type="email" />
+                <input type="email" name="userEmail" required/>
             </div>
             <p>Password</p>
             <div class="col-12" >
-                <input type="password"/>
+                <input type="password" name="userPassword" required/>
             </div>
             <p>Phone (Optional)</p>
             <div class="col-12">
-                <input type="tel" />
+                <input type="tel" name="userPhone">
             </div>
-            <button type="submit">Create Account</button>
+            <button type="submit" >Create Account</button>
         </form>
+        <p id="successMessage" ></p>
     </div>
     <div class="col-2">
         <img class="panel-image" src="images/side-plant.png"/>

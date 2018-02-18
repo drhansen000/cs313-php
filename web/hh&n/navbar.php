@@ -64,15 +64,18 @@
         <div>
             <ul class="nav navbar-nav navbar-right">
                      <?php 
-                        if (isset($_SESSION['name'])) {
-                            echo('<li id="welcome" class="nav-item" style="color: limegreen;">Welcome ' . $_SESSION['name'] . '</li>');
+                        if (isset($_SESSION['userName'])) 
+                        {
+                            echo('<li id="welcome" class="nav-item" style="color: limegreen;">Welcome ' . $_SESSION['userName'] . '</li>');
                         } 
                     ?>
                <li class="nav-item <?php if ($file === 'login' || $file == 'signup') echo 'active' ?>" >
                     <?php 
-                        if (isset($_SESSION['name'])) {
+                        if (isset($_SESSION['userName'])) 
+                        {
                             echo('<a class="nav-link" href="logout.php">Logout</a>');
-                        } else {
+                        } else 
+                        {
                             echo('<a class="nav-link" href="login.php">Login/SignUp</a>');
                         }
                     ?>
@@ -103,13 +106,3 @@
     </nav>
 </body>
 </html>
-
-<?php
-    function checkFile($fileName)
-    {
-        if ($_SERVER["SCRIPT_FILENAME"] == "/home/drhansen000/lappstack-5.6.32-1/apache2/htdocs/web/" . $fileName) 
-        {
-            echo("active");
-        }
-    }
-?>

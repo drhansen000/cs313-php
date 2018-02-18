@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="col.css" />
     <link rel="stylesheet" href="HH&N.css" />
     <link rel="stylesheet" href="login.css"/>
-    <title>Login</title>
+    <title>HH&N Login</title>
 </head>
 <body>
     <?php include("navbar.php") ?>
@@ -44,8 +44,6 @@
     function setSessionVariables()
     {
         var httpRequest = new XMLHttpRequest();
-        
-        //is this secure?
         var email       = document.getElementById("emailInput").value;
         var password    = document.getElementById("passwordInput").value;
         
@@ -68,7 +66,6 @@
         httpRequest.open("POST","setSessionVariables.php", true);
         httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         
-        //is this secure?
         httpRequest.send("email=" + email + "&password=" + password);
     }
 </script>

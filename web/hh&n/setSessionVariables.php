@@ -26,8 +26,8 @@
     $statement->execute();
     if ($row = $statement->fetch(PDO::FETCH_ASSOC))
     {
-        $_SESSION['name'] = $row['name'];
-        $customerId = $row['id'];
+        $_SESSION['userName'] = $row['name'];
+        $_SESSION['userId']   = $row['id'];
         echo(true);
     }
     else 
@@ -37,7 +37,7 @@
 
     //create and execute PDO for purchased products
     $stmt = $db->prepare('SELECT product.name, size, price, picture FROM product JOIN purchaseHistory ON product.id = purchaseHistory.productid JOIN person ON person.id = purchaseHistory.personid WHERE person.id=:theid');
-    $stmt->bindValue(':theid', $customerId, PDO::PARAM_INT);
+    $stmt->bindValue(':theid', $_SESSION['userId'], PDO::PARAM_INT);
     $stmt->execute();
     $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -52,7 +52,7 @@
 
     //create and execute PDO for services
     $stmt2 = $db->prepare('SELECT employee.name, service, date, time, cost FROM service JOIN appointment ON service.id = appointment.serviceID JOIN person AS employee ON employee.id = appointment.employeeID JOIN person AS customer ON customer.id = appointment.customerID WHERE customer.id=:theid');
-    $stmt2->bindValue(':theid', $customerId, PDO::PARAM_INT);
+    $stmt2->bindValue(':theid', $_SESSION['userId'], PDO::PARAM_INT);
     $stmt2->execute();
     $services = $stmt2->fetchAll(PDO::FETCH_ASSOC);
     

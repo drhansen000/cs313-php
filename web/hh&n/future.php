@@ -22,7 +22,8 @@
             $i;
             for ($i = 0; $i < sizeof($_SESSION['service']); $i++)
             {
-                if ($_SESSION['serviceDate'][$i] > date("Y-m-d")) {
+                if ($_SESSION['serviceDate'][$i] > date("Y-m-d")) 
+                {
                     echo('<div class="col-12 service">');
                     echo('<h5>Service: ' . $_SESSION['service'][$i] . '</h5>');
                     echo('Planned for ' . $_SESSION['serviceDate'][$i] . ' at ' . $_SESSION['serviceTime'][$i] . '<br/>');
@@ -31,7 +32,7 @@
                 }
             }
             ?>
-                <button onclick="window.location.href = 'availability.php'" type="button">Create Future Appointment</button>
+                <button onclick="window.location.href = 'createAppointment.php'" type="button">Create Future Appointment</button>
         </div>
     </div>
     <div class="col-2">

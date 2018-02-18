@@ -940,6 +940,7 @@
             {
                 //change number of items in navbar
                 document.getElementById("numberInCart").innerHTML = this.responseText + " In Cart";
+                window.location.href = "addedToCartMessage.php";
             }
             else if (this.readyState == 4) 
             {

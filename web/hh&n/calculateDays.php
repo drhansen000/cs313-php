@@ -6,7 +6,6 @@
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
 
-    echo("<pre>");
 
     $week = array();
     $longDays  = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
@@ -24,7 +23,22 @@
         }
         
         public function __toString() {
-            return $this->hours . " : " . $this->minutes . " (" . $this->available . ")";
+            if ($this->available == true) {
+                if ($this->minutes == 0) {
+                    return $this->hours . " : 00 (Open)";
+                } else {
+                    return $this->hours . " : " . $this->minutes . " (Open)";
+                }
+            } else if ($this->available == false) {
+                if ($this->minutes == 0) {
+                    return $this->hours . " : 00 (Closed)";
+                }
+                else {
+                    return $this->hours . " : " . $this->minutes . " (Closed)";
+                }
+            } else {
+                return "I don't know what the chuff is going on<br/>";
+            }
         }
     }
 
@@ -49,25 +63,15 @@
     $stmt = $db->prepare('SELECT extract(dow FROM date) AS day, extract(hour FROM time) AS hour, extract(minute FROM time) AS minute, duration FROM appointment JOIN service ON service.id = appointment.serviceid WHERE employeeID = 7');
     $stmt->execute();
     $availabilities = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
     
     $daysOfWeek = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-//    foreach($availabilities as $availability) {
-//        $day = $daysOfWeek[$availability["day"]];
-//        foreach($week[$day] as $timeSlot) {
-//            //if indexed day's hour is taken, change that existing timeSlot's availability to false
-//            if ($availability["hour"] == $timeSlot->hours && $availability["minute"] == $timeSlot->minutes) {
-//                $timeSlot->available = false;
-//            }
-//        }
-//    }
-
 
     foreach($availabilities as $availability) {
         $day = $daysOfWeek[$availability["day"]];
         for ($i = 0; $i < count($week[$day]); $i++) {
             $timeSlot = $week[$day][$i];
-            var_dump($timeSlot);
+            $week[$day][$i]->available = true;
+//            var_dump($timeSlot);
             //if indexed day's hour is taken, change that existing timeSlot's availability to false
             if ($availability["hour"] == $timeSlot->hours && $availability["minute"] == $timeSlot->minutes) {
                 $timeSlot->available = false;
@@ -83,8 +87,51 @@
             }
         }
     }
-
-
-    var_dump($week);
-    echo("</pre>");
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />    
+    <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-css/bootstrap.min.css" />
+    <link rel="stylesheet" href="col.css" />
+    <link rel="stylesheet" href="HH&N.css" />
+<title>HH&N Availabilities</title>    
+</head>
+<body>
+    <?php include("navbar.php") ?>
+    <div class="col-2">
+        <img class="panel-image" src="images/side-plant.png"/>
+    </div>    
+    <div id="description" class="col-8">
+    <h3 class="col-2">Monday</h3>
+    <h3 class="col-2">Tuesday</h3>
+    <h3 class="col-2">Wednesday</h3>
+    <h3 class="col-2">Thursday</h3>
+    <h3 class="col-2">Friday</h3>
+    <h3 class="col-2">Saturday</h3>
+<?php
+    for ($j = 1; $j < 7; $j++) {
+        for ($i = 0; $i < count($week[$day]); $i++) {
+            $timeSlot = $week[$day][$i];
+    //            var_dump($timeSlot);
+            //if indexed day's hour is taken, change that existing timeSlot's availability to false
+            if ($timeSlot->available == true) {
+                echo("<p>" . $timeSlot . "</p>");
+            } else {
+                echo("<p>" . $timeSlot . "</p>");
+            }
+            
+
+        }
+    }
+
+
+//    var_dump($week);
+?>
+    </div>
+    <div class="col-2">
+        <img class="panel-image" src="images/side-plant.png"/>
+    </div>    
+</body>
+</html>
