@@ -27,6 +27,8 @@ input {
     width: 300px;
 }
 #errorMessage {
-    color: red;
     visibility: hidden;
+}
+#errorMessage, #errorStar1, #errorStar2 {
+    color: red;
 }

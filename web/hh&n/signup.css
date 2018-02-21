@@ -10,3 +10,6 @@
 input {
     width: 300px;
 }
+#errorMessage, #errorStar1, #errorStar2 {
+    color: red;
+}

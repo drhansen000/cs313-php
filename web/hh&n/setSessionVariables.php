@@ -2,6 +2,7 @@
     session_start();
     $email    = $_POST['email'];
     $userPassword = $_POST['password'];
+    
 
     //connect to the database
     include("connect.php");
@@ -20,11 +21,11 @@
     $_SESSION['serviceProvider'] = array();
 
     //fill in the session variables and return true if email & password match in db, else return false
-    $statement = $db->prepare("SELECT name, id FROM person WHERE email =:theEmail AND password =:thePass");
+    $statement = $db->prepare("SELECT name, id, password FROM person WHERE email =:theEmail");
     $statement->bindValue(':theEmail', $email, PDO::PARAM_STR);
-    $statement->bindValue(':thePass', $userPassword, PDO::PARAM_STR);
     $statement->execute();
-    if ($row = $statement->fetch(PDO::FETCH_ASSOC))
+    $row = $statement->fetch(PDO::FETCH_ASSOC);
+    if (password_verify($_POST['password'], $row['password']))
     {
         $_SESSION['userName'] = $row['name'];
         $_SESSION['userId']   = $row['id'];
