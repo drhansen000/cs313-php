@@ -9,3 +9,13 @@
 .service {
     font-size: 20px;
 }
+.cancelButton, .editButton
+{
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    color: lightgray;
+    text-decoration: underline;
+}

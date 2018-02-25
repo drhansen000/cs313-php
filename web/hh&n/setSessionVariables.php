@@ -51,19 +51,5 @@
         array_push($_SESSION['pastItemSize'], $product['size']);
     }
 
-    //create and execute PDO for services
-    $stmt2 = $db->prepare('SELECT employee.name, service, date, time, cost FROM service JOIN appointment ON service.id = appointment.serviceID JOIN person AS employee ON employee.id = appointment.employeeID JOIN person AS customer ON customer.id = appointment.customerID WHERE customer.id=:theid');
-    $stmt2->bindValue(':theid', $_SESSION['userId'], PDO::PARAM_INT);
-    $stmt2->execute();
-    $services = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-    
-    //push in the values into service session variables
-    foreach ($services as $service)
-    {
-        array_push($_SESSION['service'], $service['service']);
-        array_push($_SESSION['serviceDate'], $service['date']);
-        array_push($_SESSION['serviceTime'], $service['time']);
-        array_push($_SESSION['serviceCost'], $service['cost']);
-        array_push($_SESSION['serviceProvider'], $service['name']);
-    }
+    include("setAppointmentVariables.php");
 ?>

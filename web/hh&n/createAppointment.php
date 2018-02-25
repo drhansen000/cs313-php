@@ -17,7 +17,7 @@
      <div id="description" class="col-8">
         <div class="col-12">
             <h1>Create an Appointment</h1>
-            <form action="appointmentCreated.php" method="post">
+            <form action="appointmentCreated.php" onsubmit="return validateForm()" method="post">
                 <select name="serviceType" onchange="serviceDescription(this)" required>
 <?php
     include("connect.php");
@@ -42,11 +42,11 @@
                     <div class="col-2"></div>
                     <div class="col-4">
                         Date<br/>
-                        <input style="width: 150px;" type="date" name="date" required>
+                        <input style="width: 150px;" id="appointmentDate" type="date" name="date" required>
                     </div>
                     <div class="col-4">
                         Time<br/>
-                        <select name="time" required>
+                        <select id="selectTimeslot" name="time" required>
                             <option value="9:00">9:00 am</option>
                             <option value="9:30">9:30 am</option>
                             <option value="10:00">10:00 am</option>
@@ -98,10 +98,31 @@
                 alert("Failure trying to open file to write. Status is: " + this.statusText);
             }
         };
-        
+
         httpRequest.open("POST","displayService.php", true);
         //this is required for post method only
         httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         httpRequest.send("serviceId=" + serviceId.value);
+    }
+    function validateForm()
+    {
+        var appointmentDate = new Date(document.getElementById("appointmentDate").value);
+        var today = new Date();
+        
+        if(appointmentDate.getDay() == 6)
+        {
+            alert("Not open on Sunday!");
+            return false;
+        }
+        else if (appointmentDate < today)
+        {
+            alert(appointmentDate.getDay());
+            alert("Can't schedule an appointment for the past!");
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 </script>
