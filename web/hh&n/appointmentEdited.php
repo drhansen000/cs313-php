@@ -32,13 +32,6 @@
     <div id="description" class="col-8">
         <h1>Appointment Updated</h1>
         <p>Your appointment was changed successfully!<br/></p>
-<?php
-    echo('<p>' . $_POST['date'] . '</p>');
-    echo('<p>' . $_POST['time'] . '</p>');
-    echo('<p>' . $_POST['info'] . '</p>');
-    echo('<p>' . $_POST['serviceType'] . '</p>');
-    echo('<p>' . $_POST['appointmentId'] . '</p>');
-?>
     </div>
     <div class="col-2">
         <img class="panel-image" src="images/side-plant.png"/>
