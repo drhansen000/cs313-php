@@ -117,7 +117,6 @@
         }
         else if (appointmentDate < today)
         {
-            alert(appointmentDate.getDay());
             alert("Can't schedule an appointment for the past!");
             return false;
         }
