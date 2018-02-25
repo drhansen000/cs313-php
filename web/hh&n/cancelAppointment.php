@@ -6,12 +6,12 @@
     $serviceDate = $_POST['serviceDate'];
     $serviceTime = $_POST['serviceTime'];
     $statement = $db->prepare("DELETE FROM appointment WHERE customerId = :userId AND date = :serviceDate AND time = :serviceTime");
-        $statement->bindValue(':userId', $userId, PDO::PARAM_INT);
-        $statement->bindValue(':serviceDate', $serviceDate, PDO::PARAM_STR);
-        $statement->bindValue(':serviceTime', $serviceTime, PDO::PARAM_STR);
-        $statement->execute();
-        
-        include("setAppointmentVariables.php");
+    $statement->bindValue(':userId', $userId, PDO::PARAM_INT);
+    $statement->bindValue(':serviceDate', $serviceDate, PDO::PARAM_STR);
+    $statement->bindValue(':serviceTime', $serviceTime, PDO::PARAM_STR);
+    $statement->execute();
+
+    include("setAppointmentVariables.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,7 +30,7 @@
     </div>    
     <div id="description" class="col-8">
         <h1>Appointment Canceled</h1>
-        <p>We hope that you create a new appointment so that we can see you!</p>
+        <p>We hope that you create a new appointment so that we can see you soon!</p>
         <button onclick="window.location.href = 'future.php'" type="button">
             Future Appointments
         </button>

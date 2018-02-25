@@ -13,13 +13,6 @@
     $_SESSION['pastItemPicture'] = array();
     $_SESSION['pastItemSize']    = array();
 
-    //create the session arrays for services
-    $_SESSION['service']         = array();
-    $_SESSION['serviceDate']     = array();
-    $_SESSION['serviceTime']     = array();
-    $_SESSION['serviceCost']     = array();
-    $_SESSION['serviceProvider'] = array();
-
     //fill in the session variables and return true if email & password match in db, else return false
     $statement = $db->prepare("SELECT name, id, password FROM person WHERE email =:theEmail");
     $statement->bindValue(':theEmail', $email, PDO::PARAM_STR);

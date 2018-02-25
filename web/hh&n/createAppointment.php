@@ -104,6 +104,7 @@
         httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         httpRequest.send("serviceId=" + serviceId.value);
     }
+    
     function validateForm()
     {
         var appointmentDate = new Date(document.getElementById("appointmentDate").value);
@@ -111,7 +112,7 @@
         
         if(appointmentDate.getDay() == 6)
         {
-            alert("Not open on Sunday!");
+            alert("We're not open on Sunday!");
             return false;
         }
         else if (appointmentDate < today)

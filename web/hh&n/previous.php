@@ -22,10 +22,13 @@
             $i;
             for ($i = 0; $i < sizeof($_SESSION['service']); $i++)
             {
-                if ($_SESSION['serviceDate'][$i] < date("Y-m-d")) {
+                if ($_SESSION['serviceDate'][$i] < date("Y-m-d")) 
+                {
+                    $serviceDate = date("F j, Y", strtotime($_SESSION['serviceDate'][$i]));
+                    $serviceTime = date("g:i a", strtotime($_SESSION['serviceTime'][$i]));
                     echo('<div class="col-12 service">');
                     echo('<h5>Service: ' . $_SESSION['service'][$i] . '</h5>');
-                    echo('Received on ' . $_SESSION['serviceDate'][$i] . ' at ' . $_SESSION['serviceTime'][$i] . '<br/>');
+                    echo('Received on ' . $serviceDate . ' at ' . $serviceTime . '<br/>');
                     echo('Stylist ' . $_SESSION['serviceProvider'][$i] . '<br/>');
                     echo(' Cost $' . $_SESSION['serviceCost'][$i] . '</div>');
                 }

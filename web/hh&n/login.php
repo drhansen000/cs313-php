@@ -51,10 +51,14 @@
         {
             if (this.readyState == 4 && this.status == 200)
             {
-                if (this.responseText == true) {
+                if (this.responseText == true) 
+                {
                     window.location.href = "offer.php";
-                } else {
+                } 
+                else 
+                {
                     document.getElementById("errorMessage").style.visibility = "visible";
+                    alert(this.responseText);
                 }
             }
             else if (this.readyState == 4) 

@@ -24,13 +24,17 @@
             {
                 if ($_SESSION['serviceDate'][$i] > date("Y-m-d")) 
                 {
+                    $serviceDate = date("F j, Y", strtotime($_SESSION['serviceDate'][$i]));
+                    $serviceTime = date("g:i a", strtotime($_SESSION['serviceTime'][$i]));
                     echo('<div class="col-12 service">');
                     echo('<form action="cancelAppointment.php" method="post">');
                     echo('<h5>Service: ' . $_SESSION['service'][$i] . '</h5>');
                     echo('<input type="hidden" name="serviceDate" value="' . $_SESSION['serviceDate'][$i] . '"/>');
                     echo('<input type="hidden" name="serviceTime" value="' . $_SESSION['serviceTime'][$i] . '"/>');
-                    echo('Planned for ' . $_SESSION['serviceDate'][$i]);
-                    echo(' at ' . $_SESSION['serviceTime'][$i] . '<br/>');
+                    echo('<input type="hidden" name="serviceType" value="' . $_SESSION['service'][$i] . '"/>');
+                    echo('<input type="hidden" name="serviceDetails" value="' . $_SESSION['serviceDetails'][$i] . '"/>');
+                    echo('Planned for ' . $serviceDate);
+                    echo(' at ' . $serviceTime . '<br/>');
                     echo('Stylist ' . $_SESSION['serviceProvider'][$i] . '<br/>');
                     echo('Cost $' . $_SESSION['serviceCost'][$i] . '<br>');
                     echo("<button type='submit' class='cancelButton'>Cancel</button> / ");
@@ -46,30 +50,3 @@
     </div>
 </body>
 </html>
-<script>
-    function cancelAppointment()
-    {
-//        var httpRequest = new XMLHttpRequest();
-//        httpRequest.onreadystatechange = function () 
-//        {
-//            if (this.readyState == 4 && this.status == 200)
-//            {
-//                location.reload();
-//            }
-//            else if (this.readyState == 4) 
-//            {
-//                alert("Failure trying to open file to write. Status is: " + this.statusText);
-//            }
-//        };
-//
-//        httpRequest.open("POST","cancelAppointment.php", true);
-//        httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-//        httpRequest.send("serviceDate=" + itemName + "&serviceTime=");
-    }
-    
-    function updateAppointment()
-    {
-        
-    }
-
-</script>
