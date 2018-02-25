@@ -33,6 +33,7 @@
                     echo('<input type="hidden" name="serviceTime" value="' . $_SESSION['serviceTime'][$i] . '"/>');
                     echo('<input type="hidden" name="serviceType" value="' . $_SESSION['service'][$i] . '"/>');
                     echo('<input type="hidden" name="serviceDetails" value="' . $_SESSION['serviceDetails'][$i] . '"/>');
+                    echo('<input type="hidden" name="appointmentId" value="' . $_SESSION['appointmentId'][$i] . '"/>');
                     echo('Planned for ' . $serviceDate);
                     echo(' at ' . $serviceTime . '<br/>');
                     echo('Stylist ' . $_SESSION['serviceProvider'][$i] . '<br/>');

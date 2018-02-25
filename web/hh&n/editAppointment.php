@@ -17,7 +17,7 @@
      <div id="description" class="col-8">
         <div class="col-12">
             <h1>Edit Appointment</h1>
-            <form action="appointmentCreated.php" onsubmit="return validateForm()" method="post">
+            <form action="appointmentEdited.php" onsubmit="return validateForm()" method="post">
                 <select name="serviceType" onchange="serviceDescription(this)" required>
 <?php
     include("connect.php");
@@ -120,6 +120,7 @@
                     Additional Information for Service Provider<br/>
 <?php
     echo('<textarea name="info" rows="4" cols="50" maxlength="250">' . $_POST['serviceDetails'] . '</textarea>');
+    echo('<input type="hidden" name="appointmentId" value="' . $_POST['appointmentId'] . '"/>');
 ?>
                 </div>
                 <div class="col-12">
@@ -168,7 +169,6 @@
         }
         else if (appointmentDate < today)
         {
-            alert(appointmentDate.getDay());
             alert("Can't schedule an appointment for the past!");
             return false;
         }

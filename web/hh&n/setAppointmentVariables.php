@@ -6,9 +6,10 @@
     $_SESSION['serviceCost']     = array();
     $_SESSION['serviceProvider'] = array();
     $_SESSION['serviceDetails']  = array();
+    $_SESSION['appointmentId']   = array();
 
     //create and execute PDO for services
-    $stmt2 = $db->prepare('SELECT employee.name, service, date, time, cost, details FROM service JOIN appointment ON service.id = appointment.serviceID JOIN person AS employee ON employee.id = appointment.employeeID JOIN person AS customer ON customer.id = appointment.customerID WHERE customer.id=:theid ORDER BY date');
+    $stmt2 = $db->prepare('SELECT employee.name, service, date, time, cost, details, appointment.id FROM service JOIN appointment ON service.id = appointment.serviceID JOIN person AS employee ON employee.id = appointment.employeeID JOIN person AS customer ON customer.id = appointment.customerID WHERE customer.id=:theid ORDER BY date');
     $stmt2->bindValue(':theid', $_SESSION['userId'], PDO::PARAM_INT);
     $stmt2->execute();
     $services = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -22,5 +23,6 @@
         array_push($_SESSION['serviceCost'], $service['cost']);
         array_push($_SESSION['serviceProvider'], $service['name']);
         array_push($_SESSION['serviceDetails'], $service['details']);
+        array_push($_SESSION['appointmentId'], $service['id']);
     }
 ?>
