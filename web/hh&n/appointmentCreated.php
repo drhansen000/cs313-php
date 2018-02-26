@@ -5,7 +5,7 @@
     if (isset($_SESSION['userName']))
     {
         echo("<h1>See you then!</h1><p>Your appointment was created successfully!<br/></p>");
-        $statement = $db->prepare("INSERT INTO appointment (date, time, history, details, serviceid, customerid, employeeid) VALUES (:date, :time, 'created', :details, :serviceid, :customerid, 7)");
+        $statement = $db->prepare("INSERT INTO appointment (date, time, history, details, serviceid, customerid, employeeid) VALUES (:date, :time, 'created', :details, :serviceid, :customerid, 47)");
         $statement->bindValue(':date', $_POST['date'], PDO::PARAM_STR);
         $statement->bindValue(':time', $_POST['time'], PDO::PARAM_STR);
         $statement->bindValue(':details', $_POST['info'], PDO::PARAM_STR);
