@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="text/css" rel="stylesheet" href="col.css" />
+    <link type="text/css" rel="stylesheet" href="assign11.css" />
+    <title>Mileage Calculator
+    </title>
+    <script type="text/javascript">
+         function setFocus() 
+        {
+            document.getElementById("startC").focus();
+        }
+        function displayMileage() 
+        {
+            var startCi = document.getElementById("startC").value;
+            var startSt = document.getElementById("startS").value;
+            var endCi   = document.getElementById("endC").value;
+            var endSt   = document.getElementById("endS").value;
+            var httpRequest = new XMLHttpRequest();
+            httpRequest.onreadystatechange = function() 
+            {
+                if (this.readyState == 4 && this.status == 200) 
+                {
+                    var milList = JSON.parse(this.responseText);
+                    var milTable = "<tr><th>Start City</th><th>State</th>" +
+                        "<th>End City</th><th>State</th><th>Miles</th><th>Transport</th</tr>";
+                    var change = "";
+                    if (milList.trip.tmode == undefined) 
+                    {
+                        change = "Not available";
+                    }
+                    else 
+                    {
+                        for (var i = 0; i < milList.trip.tmode.length; i++) 
+                        {
+                            if(i == milList.trip.tmode.length - 1)
+                            {
+                                change += milList.trip.tmode[i];
+                            }
+                            else
+                            {
+                                change += milList.trip.tmode[i] + ", ";
+                            }
+                        }
+                    }
+                    milTable += "<tr><td>" + milList.trip.startcity + "</td><td>" +
+                        milList.trip.startstate + "</td><td>" +
+                        milList.trip.endcity + "</td><td>" +
+                        milList.trip.endstate + "</td><td>" +
+                        milList.trip.miles + "</td><td>" + change + "</td></tr>";
+                    document.getElementById("mileage").innerHTML = milTable;
+                } 
+                else if (this.readyState == 4)
+                {
+                    alert("Failure trying to open file. Status is: " + this.statusText);
+                }
+            };
+            httpRequest.open("GET", "/cgi-bin/ercanbracks/mileage/mileageAjaxJSON?startCity=" + startCi + "&startState=" + startSt + "&endCity=" + endCi + "&endState=" + endSt, true);
+            httpRequest.send();
+            
+        }
+         function validate() 
+        {
+            var startCi = document.getElementById("startC").value;
+            var startSt = document.getElementById("startS").value;
+            var endCi   = document.getElementById("endC").value;
+            var endSt   = document.getElementById("endS").value;
+            var stTest  = /([a-z]|[A-Z]){2}/;
+            if (startCi.length < 1)
+            {
+                document.getElementById("startC").focus();
+                alert("Please provide the starting city");
+            }
+            else if (stTest.test(startSt) == false)
+            {
+                document.getElementById("startS").focus();
+                alert("Please provide the starting state using two letters");
+            }
+            else if (endCi.length < 1)
+            {
+                document.getElementById("endC").focus();
+                alert("Please provide the destination city");
+            }
+            else if (stTest.test(endSt) == false)
+            {
+                document.getElementById("endS").focus();
+                alert("Please provide the destination state using two letters");
+            }
+            else
+            {
+                displayMileage();
+            }
+        }
+
+        
+    </script>
+</head>
+
+<body onload="setFocus()">
+    <header class="col-8">
+        <p class="header">Mileage Calculator</p>
+    </header>
+    <main class="col-8">
+        <hr/>
+        <img id="USA" class="col-8" src="./images/USA.jpg" alt="USA map" />
+        <div class="col-12">
+        <p class="sub-header">
+            Origin
+        </p>
+        <p>
+            City
+            <input type="text" placeholder="e.g.Boise" id="startC" name="startCity" maxlength="21"/>
+            State
+            <input type="text" placeholder="e.g.ID" id="startS" name="startState" maxlength="2"/>
+        </p>
+        <p class="sub-header">
+            Destination
+        </p>
+        <p>
+            City
+            <input type="text" placeholder="e.g.New York" id="endC" name="endCity" maxlength="21"/>
+            State
+            <input type="text" placeholder="e.g.NY" id="endS" name="endState" maxlength="2"/>
+        </p>
+        </div>
+        <div class="col-12">
+            <input type="button" value="Mileage" onclick="validate()"/>
+        </div>
+        <table id="mileage">
+            <tr>
+                <th>Start City</th>
+                <th>State</th>
+                <th>End City</th>
+                <th>State</th>
+                <th>Miles</th>
+                <th>Transport</th>
+            </tr>
+        </table>
+    </main>
+    <footer>
+        <p>
+            Image was found at
+            <a href="http://pixabay.com">pixabay.com</a>
+        </p>
+    </footer>
+</body>
+
+</html>

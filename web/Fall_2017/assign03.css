@@ -1,0 +1,63 @@
+body 
+{
+    margin: auto;
+    max-width: 900px;
+}
+#logo
+{
+    position: absolute;
+}
+#top
+{
+    text-align: center;
+}
+#top h1
+{
+    font-size: 2em;
+    margin-bottom: 0;
+    color: #FF9C00;
+}
+#menu
+{
+    background-color: #FF9C00;
+    border-radius: 10px;
+    margin-top: 42px;
+}
+#menu li
+{
+    display: inline;
+    padding: 1em;
+    line-height: 2em;
+    
+}
+#menu a
+{
+    color: black;
+    font-size: 1.2em;
+    display: inline-block;
+}
+#menu a:hover
+{
+    background-color: black;
+    color:#FF9C00;
+}
+.content
+{
+    font-family: helvetica, sans-serif;
+}
+.text
+{
+    max-width: 450;
+}
+
+footer
+{
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer p
+{
+    margin-top: 1.7em;
+}

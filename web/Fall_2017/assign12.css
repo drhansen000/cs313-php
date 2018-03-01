@@ -1,0 +1,104 @@
+body
+{
+    text-align: center;
+    font-family: verdana;
+}
+.header
+{
+    font-size: 30px;
+    font-weight: bolder;
+}
+.sub-header
+{
+    font-size: 25px;
+    font-weight: bold;
+}
+#student-sec
+{
+    padding: 0;
+}
+#registration-sec
+{
+    text-align: left;
+}
+input, select
+{
+    padding: 5px;
+    border-radius: 5px;
+}
+.student-info .col-4
+{
+    padding: 0;
+    
+}
+.student-info
+{
+    padding: 0;
+}
+.student
+{
+    width: 105px;
+}
+#studentID, #studentID2
+{
+    width: 115px;
+}
+#building
+{
+    width: 105px;
+}
+#room
+{
+    width: 60px;
+}
+#duet
+{
+    visibility: hidden;
+    padding: 0px;
+}
+#display-list
+{
+    margin-left: 16.66%;
+}
+#display-list
+{
+    font-size: 14px;
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin-bottom: 4em;
+}
+tr:nth-child(1)
+{
+    border-bottom-style: solid;
+    border-color: black;
+    text-align: left;
+}
+tr:nth-last-child()
+{
+    border-bottom-style: none;
+}
+td
+{
+    text-align: left;
+    padding: .3em;
+}
+th
+{
+    padding: .3em;
+    font-size: 16px;
+    font-weight: bold;
+}
+tr:nth-child(even)
+{
+    background-color: lightgray;
+}
+
+@media only screen and (max-width:800px)
+{
+    #student-sec, #registration-sec, #display-list { width:100%; margin: auto; }
+}
+
+@media only screen and (max-width:500px)
+{
+    .col-6 { width:100%; }
+}

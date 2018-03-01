@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="inclass01.css" />
+    <title>
+        Student List
+    </title>
+    <script type="text/javascript">
+        function loadDoc1() {
+            var httpRequest = new XMLHttpRequest();
+            httpRequest.onreadystatechange = function() 
+            {
+                if (this.readyState == 4 && this.status == 200) 
+                {
+                    document.getElementById("student-list").innerHTML = this.responseText;
+                } 
+                else 
+                {
+                    document.getElementById("student-list").innerHTML =
+                        "The state is " + this.readyState + " and the status is " + this.status;
+                }
+            };
+            httpRequest.open("GET", "http://157.201.194.254/~ercanbracks/studentList.html", true);
+            httpRequest.send();
+        }
+
+        function loadDoc2() 
+        {
+            var httpRequest = new XMLHttpRequest();
+            httpRequest.onreadystatechange = function() 
+            {
+                if (this.readyState == 4 && this.status == 200) 
+                {
+                    document.getElementById("student-list").innerHTML = this.responseText;
+                } else 
+                {
+                    document.getElementById("student-list").innerHTML =
+                        this.readyState + " " + this.status;
+                }
+            };
+            httpRequest.open("GET", "http://157.201.194.254/~ercanbracks/studentList1.html", true);
+            httpRequest.send();
+        }
+        
+        function getFileByName()
+        {
+            var fileName = document.getElementById("filenamebox").value;
+            if (fileName == "http://157.201.194.254/~ercanbracks/studentList1.html")
+                {
+                    loadDoc2();
+                }
+            else if (fileName == "http://157.201.194.254/~ercanbracks/studentList.html")
+                {
+                    loadDoc1();
+                }
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>
+        Student Lists
+    </h1>
+    <div id="student-list">
+        <p>
+        </p>
+
+
+    </div>
+    <input type="button" value="list 1" onclick="loadDoc1()" />
+    <input type="button" value="list 2" onclick="loadDoc2()" />
+    <div>
+        Filename:
+        <input onblur="getFileByName()"type="text" id="filenamebox" />
+    </div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daniel Hansen's Home Page</title>
+    <style>
+        #info,
+        header,
+        table 
+        {
+            margin: auto;
+            text-align: center;
+            max-width: 1000px;
+        }
+        p,
+        blockquote,
+        table 
+        {
+            font-family: Arial, sans-serif;
+        }
+        td,
+        th {
+            border-style: groove;
+            border-color: #000000;
+            color: #114FDE;
+        }
+        #form,
+        .holiday 
+        {
+            margin: auto;
+            text-align: center;
+            text-align: left;
+            max-width: 750px;
+        }
+        .holiday 
+        {
+            max-width: 375px;
+        }
+    </style>
+</head>
+<body style="1em">
+    <header id="#top">
+        <a href="index.html">CS 213 Assignments</a>
+        <h1 style="color: goldenrod; font-family: serif, helvetica;">
+            Welcome to Daniel Hansen's Home Page!
+        </h1>
+    </header>
+    <hr/>
+    <div id="info" style="line-height: 1.2em;">
+
+        <h2 style="font-family: sans-serif;">A Little About Me</h2>
+        <p>
+            <img src="./images/karli_and_me.jpg" width="300" alt="Karli and me" /><br/> 
+            My name is Daniel Hansen<br/> 
+            My major is the best major <em>ever</em>,
+            <a href="http://www.byui.edu/catalog/#/programs/4kNfm-2oZ">
+                <strong>software engineering</strong></a><br/>
+            <a href="#schedule">This semester schedule</a><br/> 
+            I met my wife a little over a year ago, at BYU-I. 
+            Her name is Karli and her major is also software engineering.<br/> 
+            I'm from Redmond, WA<br/> 
+            One of my <em>favorite</em> quotes was said by Theodore Roosevelt in 1910 which states,<br/>
+        </p>
+        <blockquote>
+            "It is not the critic who counts; 
+            not the man who points out how the strong man stumbles, 
+            or where the doer of deeds could have done them better. 
+            The credit belongs to the man who is actually in the arena, 
+            whose face is marred by dust and sweat and blood; who strives valiantly; 
+            who errs, who comes short again and again, because there is no effort without error and shortcoming; 
+            but who does actually strive to do the deeds; who knows great enthusiasms,
+            the great devotions; who spends himself in a worthy cause; 
+            who at the best knows in the end the triumph of high achievement, and who at the worst, 
+            if he fails, at least fails while daring greatly, so that his place shall never be with 
+            those cold and timid souls who neither know victory nor defeat."
+        </blockquote>
+    </div>
+    <div>
+        <table id="schedule" style="background-color: #FFAA00; border-style:groove;">
+            <tr>
+                <th style="padding-right: 2em;"><b>Course #</b></th>
+                <th style="padding-right: 1em"><b>Course description</b></th>
+                <th style="padding-right: 1em"><b>Section #</b></th>
+                <th style="padding-right: 5em"><b>Class Time</b></th>
+                <th><b>Class Location</b></th>
+            </tr>
+            <tr>
+                <td>CS213</td>
+                <td>Web Engineering I</td>
+                <td>01</td>
+                <td>TR-11:30 - 1:00 PM</td>
+                <td>STC 394</td>
+            </tr>
+            <tr>
+                <td>CS235</td>
+                <td>Data Structures</td>
+                <td>02</td>
+                <td>MWF - 12:45-1:45PM</td>
+                <td>STC 343</td>
+            </tr>
+            <tr>
+                <td>FDENG301</td>
+                <td>Advanced Writing and Research</td>
+                <td>34</td>
+                <td>TR - 9:45-11:15</td>
+                <td>Smith 330</td>
+            </tr>
+            <tr>
+                <td>FDREL324</td>
+                <td>Doctrine and Covenants</td>
+                <td>13</td>
+                <td>0:00-0:00AM</td>
+                <td>Online</td>
+            </tr>
+            <tr>
+                <td>FDSI204</td>
+                <td>The American Epidemic</td>
+                <td>02</td>
+                <td>MWF-10:15-11:15AM</td>
+                <td>Benson 110</td>
+            </tr>
+        </table>
+    </div>
+    <div style="text-align: center;">
+        <h1 style="color: #FF9000; margin-bottom: 0">I Love The Holidays!</h1>
+        <form>
+            <div style="display: flex; max-width: 750">
+                <div class="holiday" style="max-width: 375px; margin-top: 0; margin-right: 0">
+                    <p>
+                        Now that the holidays are coming up,<br/>
+                        which holiday is your favorite?
+                    </p>
+                    <input type="radio" name="holiday" /><span>Halloween</span><br/>
+                    <input type="radio" name="holiday" /><span>Thanksgiving</span><br/>
+                    <input type="radio" name="holiday" /><span>Christmas</span><br/>
+                    <input type="radio" name="holiday" /><span>Easter</span><br/>
+                    <input type="radio" name="holiday" /><span>Other</span><br/>
+                    <p>What do you like to do for the holidays?</p>
+                    <input type="checkbox" name="activities"><span>Decorate</span><br/>
+                    <input type="checkbox" name="activities"><span>Spend time with family/friends</span><br/>
+                    <input type="checkbox" name="activities"><span>Eat</span><br/>
+                    <input type="checkbox" name="activities"><span>Relax</span><br/>
+                    <input type="checkbox" name="activities"><span>Other</span><br/>
+                    <div style="padding-top: 1em">
+                        <p>
+                            I'd love to hear some of your crafting ideas!<br/> 
+                            If you have any, please enter your name and ideas below<br/>
+                        </p>
+                        <select style="background-color: #FFC55F">
+                            <option value="Title">Mr.</option>
+                            <option value="Title">Mrs.</option>
+                            <option value="Title">Ms.</option>
+                            <option value="Title">Dr.</option>
+                        </select>
+                        <input type="text" placeholder="ex.John Doe" style="background-color: #FFC55F" /><br/>
+                        <textarea placeholder="ex.For Halloween, I like to ..." rows="7" cols="40" 
+                                  style="background-color: #FFC55F"></textarea><br/>
+                        <input type="reset">
+                        <input type="submit">
+                    </div>
+                </div>
+                <div class="holiday" style="max-width: 375; margin-left: 0">
+                    <p>
+                        My wife's gotten me into crafts and we're having fun preparing for Halloween!<br/>
+                        This is an idea that we got from Pintrest!
+                    </p>
+                    <a href="https://www.pinterest.com/pin/665688388642439222/sent/?sfo=1&sender=665688526079181930&invite_code=189ebc6943ad4a898d08e878b03eba2e">
+                        <img src="./images/pumpkin.jpg" width="375" alt="halloween decoration" />
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer>
+        To go back to the top, click <a href="#top">here</a>
+
+    </footer>
+</body>
+
+</html>

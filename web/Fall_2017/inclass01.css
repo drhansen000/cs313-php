@@ -1,0 +1,13 @@
+body
+{
+    900px;
+    text-align: center;
+}
+
+div
+{
+    border-style: solid;
+    width:60%;
+    height: 40%;
+    
+}

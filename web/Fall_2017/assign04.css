@@ -1,0 +1,47 @@
+body
+{
+    background-color: #236267;
+    margin: auto;
+    
+}
+div
+{
+    display: flex;
+    justify-content: center;
+}
+form
+{
+    background-color: #68979B;
+    max-width: 500px;
+    font-size: 25px;
+    padding: 1em;
+    border-radius: 15px;
+}
+h1
+{
+    text-align: center;
+}
+input
+{
+    margin: 1em;
+    padding: .3em;
+    font-size: 15px;
+}
+#apr
+{
+    margin-left: 9em;
+}
+#term
+{
+    margin-left: 4.8em;
+}
+#amount
+{
+    margin-left: 2.8em;
+}
+#reset
+{
+    margin-left: 7em;
+    padding-left: 1em;
+    padding-right: 1em;
+}

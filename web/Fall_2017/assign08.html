@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Countries and Students</title>
+    <link rel="stylesheet" type="text/css" href="col.css"/>
+    <link rel="stylesheet" type="text/css" href="assign08.css"/>
+    <script type="text/javascript">
+        var httpRequest = new XMLHttpRequest();
+        function loadCountry()
+        {
+            httpRequest.onreadystatechange = function() 
+            {
+                if (this.readyState == 4 && this.status == 200) 
+                {
+                    document.getElementById("country-info").innerHTML = 
+                        "<h2>City             Population</h2><br/>" + this.responseText;
+                    document.getElementById("country-info").style.visibility = "visible";
+                } 
+                else if (this.readyState == 4)
+                {
+                        alert("Failure trying to open file. Status is: " + this.status);
+                }
+            };
+        }
+        function loadUSA()
+        {
+            loadCountry();
+            httpRequest.open("GET", "http://157.201.194.254/~ercanbracks/usa.txt", true);
+            httpRequest.send();
+        }
+        function loadCanada()
+        {
+            loadCountry();
+            httpRequest.open("GET", "http://157.201.194.254/~ercanbracks/canada.txt", true);
+            httpRequest.send();
+        }
+        function loadRussia()
+        {
+            loadCountry();
+            httpRequest.open("GET", "http://157.201.194.254/~ercanbracks/russia.txt", true);
+            httpRequest.send();
+        }
+        function loadMexico()
+        {
+            loadCountry();
+            httpRequest.open("GET", "http://157.201.194.254/~ercanbracks/mexico.txt", true);
+            httpRequest.send();
+        }
+        function loadStudent()
+        {
+            var fileName = document.getElementById("studentFile").value;
+            httpRequest.onreadystatechange = function() 
+            {
+                if (this.readyState == 4 && this.status == 200) 
+                { 
+                    var studentList = JSON.parse(this.responseText);
+                    document.getElementById("student-info").style.visibility = "visible";
+                    var studentTable = 
+                        "<tr><th>Name</th><th>Address</th><th>Major</th><th>GPA</th></tr>";
+                    for(var i = 0; i < studentList.students.length; i++)
+                    {
+                        studentTable += "<tr><td>" + studentList.students[i].first + " " +
+                            studentList.students[i].last + "</td><td>" + 
+                            studentList.students[i].address.city + " " +
+                            studentList.students[i].address.state + " " +
+                            studentList.students[i].address.zip + " " +
+                            "</td><td>" + 
+                            studentList.students[i].major + "</td><td>" +
+                            studentList.students[i].gpa + "</td></tr>";
+                    }
+                    document.getElementById("student-info").innerHTML = studentTable;
+                } 
+                else if (this.readyState == 4)
+                {
+                    alert("Failure trying to open file. Status is: " + this.statusText);
+                }
+            };
+            httpRequest.open("GET", fileName, true);
+            httpRequest.send();   
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Countries and Students
+        </h1>
+    </header>
+    <div class="instructions">
+        <h2>Countries and their top 10 most populated cities</h2>
+        <p>
+            Please select a country flag to see their top ten populated cities
+        </p>
+    </div>
+    <div id="country-flag">
+            <img class="col-3" src="./images/american-flag.png" onclick="loadUSA()"    alt="american flag"/>
+            <img class="col-3" src="./images/canadian-flag.png" onclick="loadCanada()" alt="canadian flag"/>
+            <img class="col-3" src="./images/russian-flag.png"  onclick="loadRussia()" alt="russian flag"/>
+            <img class="col-3" src="./images/mexican-flag.png"  onclick="loadMexico()" alt="mexican flag"/>
+    </div>
+    <div class="col-12">
+        <pre id="country-info" class="col-6"></pre>
+    </div>
+        <div class="instructions col-12">
+            <h2>Students and Their Information</h2>
+            <p>
+                Please type in the textbox the file that you want to retrieve 
+                and click "Find" to see a table of student and their information.
+            </p>
+        </div>
+    <div class="col-12">
+        <input id="studentFile" type="text" maxlength="55" style="width: 320px;" value="http://157.201.194.254/~ercanbracks/cs213/json.txt"/>
+        <input type="button" value="Find" onclick="loadStudent()"/>
+    </div>
+    <div id="student-table-id" class="col-12">
+        <table id="student-info">
+        
+        </table>
+    </div>
+        <footer>
+        <div class="col-12">
+            <p>
+                Images were found at
+                <a href="http://pixabay.com">pixabay.com</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

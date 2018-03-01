@@ -1,0 +1,112 @@
+body
+{
+    background-color: #236267;
+    text-align: center;
+    font-size: 25px;
+}
+#mortgage-calculator, #menu, #directory-display
+{
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: #68979B;
+    border-radius: 15px;
+}
+#menu
+{
+    margin-bottom: 42px;
+    padding: 0px;
+}
+#menu ul
+{
+    margin: 0px;
+    text-align: left;
+}
+#menu li
+{
+    display: inline-block;
+    line-height: 2em; 
+}
+#menu a
+{
+    color: black;
+    padding: 10px 30px 10px 30px;
+    display: inline-block;
+}
+#menu a:hover
+{
+    background-color: #447E83;
+    color: black;
+}
+#reset, button, #calculate, #dir-button
+{
+    font-size: 20px;
+    cursor: pointer;
+}
+.col-12
+{
+    padding: 8px;
+}
+.prompt
+{
+    text-align: left;
+}
+input, button
+{
+    border-radius: 5px;
+}
+#month
+{
+    padding-left: 25px;
+}
+
+/*only for assign09.html format*/
+#directory-list
+{
+    display: flex;
+    justify-content: center;
+}
+#directory-info
+{
+    visibility: hidden;
+    border-style: groove;
+    border-color: black;
+    background-color: #649797;
+    color: black;
+    font-size: 15px;
+}
+td
+{
+    border-style: groove;
+    border-color: black;
+    text-align: left;
+    padding: .5em;
+}
+th
+{
+    border-style: groove;
+    border-color: black;
+    text-align: center;
+    padding: .5em;
+}
+
+@media only screen and (max-width:1000px)
+{
+     #mortgage-calculator, #menu {width: 75%; margin-left: 12.5%;}
+}
+@media only screen and (max-width:700px)
+{
+    #mortgage-calculator, #menu {width: 100%; margin: auto;}
+    #menu{ margin-bottom: 30px;}
+    .col-5 {width: 50%;}
+}
+
+@media only screen and (max-width:500px)
+{
+    [class*="col-"] 
+    { 
+        text-align: center; 
+        width:100%; 
+        margin: auto;
+    }
+    #menu li{ width: 48%; text-align: center; }
+}

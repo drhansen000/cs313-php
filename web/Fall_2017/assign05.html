@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="assign05.css" />
+    <title>Pokemon Merchandise</title>
+    <script type="text/javascript">
+        function calcTotal() 
+        {
+            var total = 0;
+            var numItems = 0;
+            if (document.getElementById("squirtle").checked) 
+            {
+                total += 100;
+                numItems++;
+            }
+            if (document.getElementById("charmander").checked) 
+            {
+                total += 100;
+                numItems++;
+            }
+            if (document.getElementById("bulbasaur").checked) 
+            {
+                total += 100;
+                numItems++;
+            }
+            if (document.getElementById("pikachu").checked) 
+            {
+                total += 150;
+                numItems++;
+            }
+            document.getElementById("total").innerHTML =
+                "Total: $" + total + " (" + numItems + " Pokemon)";
+        }
+
+        function show() 
+        {
+            document.getElementById('information').style.display='flex';
+            firstFocus();
+        }
+        
+        function firstFocus()
+        {
+            document.getElementById("first").focus();
+        }
+        
+        function validate() 
+        {
+            var tel = document.getElementById("telephone").value;
+            var telTest = /\d\d\d-\d\d\d-\d\d\d\d/;
+            var cardNumber = document.getElementById("card-number").value;
+            var cardNumberTest = /\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d/;
+            if (telTest.test(tel) == true && cardNumber.length == 16)
+            {
+                return true;
+            }
+            else
+            {
+                if (telTest.test(tel) == false )
+                {
+                    document.getElementById("telephone").focus();
+                    document.getElementById("less-than-twelve").innerHTML =
+                                "Invalid Telephone #";
+                }
+                if (cardNumber.length < 16)
+                {
+                    document.getElementById("card-number").focus();
+                    document.getElementById("less-than-sixteen").innerHTML = "Invalid Card #";
+                }
+                return false;
+            }
+        }
+        
+        function setBackTel()
+        {
+            document.getElementById("less-than-twelve").innerHTML = "Telephone #";
+        }
+        
+        function setBackCard()
+        {
+            document.getElementById("less-than-sixteen").innerHTML = "Credit Card #";
+        }
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Pokemon Starter Pack</h1>
+        <p>
+            Every Pokemon Trainer needs his very own pokemon 
+            and we're just the place to get one!
+        </p>
+    </header>
+    <div id="pokemon">
+        <div id=images>
+            <img src="./images/squirtle.jpg" width="100" alt="squirtle" />
+            <img src="./images/charmander.jpg" width="87" alt="charmander" />
+            <img src="./images/bulbasaur.jpg" width="87" alt="bulbasaur" />
+            <img src="./images/pikachu.jpg" width="100" alt="pikachu" />
+        </div>
+        <div>
+            <input type="checkbox" id="squirtle" name="purchase" 
+                   onclick="calcTotal()" value="100">
+            <span>$100</span>
+            <input type="checkbox" id="charmander" name="purchase" 
+                   onclick="calcTotal()" value="100">
+            <span>$100</span>
+            <input type="checkbox" id="bulbasaur" name="purchase" 
+                   onclick="calcTotal()" value="100">
+            <span>$100</span>
+            <input type="checkbox" id="pikachu" name="purchase" 
+                   onclick="calcTotal()" value="150">
+            <span>$150</span>
+            <p id="total">Total:</p>
+        </div>
+        <input type="button" name="checkout" value="proceed to checkout" 
+               onclick="show()" />
+    </div>
+    <form id="information" action="successful.html" onsubmit="return validate()">
+        <div id="shipping">
+            <p>Billing Address</p>
+            <div class="setup">
+                <div class="personal">
+                    <span>First Name</span>
+                    <input type="text" class="general" id="first" placeholder="e.g.John" 
+                           maxlength="20" tabindex="1" required/><br/>
+                    <span>Email</span>
+                    <input type="text" class="general" 
+                           placeholder="e.g.AshCatcher120@gmail.com" 
+                           maxlength="28" style="width:200px" tabindex="3" required/>
+                </div>
+                <div class="personal">
+                    <span>Last Name</span>
+                    <input type="text" class="general" placeholder="e.g.Doe" 
+                           maxlength="20" tabindex="2" required/><br/>
+                    <span id="less-than-twelve">Telephone #</span>
+                    <input type="text" class="general" id="telephone" onchange="setBackTel()" 
+                           placeholder="XXX-XXX-XXXX" maxlength="12" tabindex="4"required>
+                </div>
+            </div>
+            <div style="display: flex">
+                <div class="address">
+                    <span>Street Address</span>
+                    <input type="text" placeholder="e.g.2500 E 4 W" 
+                           maxlength="25" style="width:250px" tabindex="5" required/>
+                    <div>
+                        <div>
+                            <span>City</span>
+                            <span style="margin-left: 120px">Zipcode</span>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="e.g.Rexburg" 
+                                   maxlength="15" style="width:150px" tabindex="7" required/>
+                            <input type="text" placeholder="e.g.83993" 
+                                   maxlength="10" style="width:90px" tabindex="8" required/>
+                        </div>
+                    </div>
+                </div>
+                <div class="address">
+                    <span>Apt.</span>
+                    <input type="text" placeholder="e.g.#203" 
+                           maxlength="6" style="width:60px" tabindex="6"/>
+                    <span>State</span>
+                    <input type="text" placeholder="e.g.WA" 
+                           maxlength="3" style="width:60px" tabindex="9" required/>
+                </div>
+
+            </div>
+        </div>
+        <div id="payment">
+            <p>Payment Method</p>
+            <div>
+                <input type="radio" name="card" tabindex="10" required>VISA<br/>
+                <input type="radio" name="card" required>Mastercard<br/>
+                <input type="radio" name="card" required>American Express<br/>
+            </div>
+            <div style="margin-top: 1em">
+                <span id="less-than-sixteen">Credit Card #</span>
+                <span style="margin-left: 40px">Expiration</span>
+            </div>
+            <div style="margin-bottom: .5em">
+                <input type="text" id="card-number" placeholder="e.g.2435234529393494" 
+                       onchange="setBackCard()" maxlength="16" tabindex="11" required/>
+                <select tabindex="12">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                </select>
+                <span>/</span>
+                <select tabindex="13">
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                </select>
+            </div>
+            <input type="reset" onclick="firstFocus()" tabindex="14"/>
+            <input type="submit" tabindex="15"/>
+        </div>
+    </form>
+    <footer style="margin-top: 4em">
+        Images were found at <a href="https://seeklogo.com">seeklogo.com</a>
+    </footer>
+</body>
+
+</html>

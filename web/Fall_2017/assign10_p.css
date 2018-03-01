@@ -1,0 +1,44 @@
+body
+{
+    background-color: darkgray;
+    font-family: verdana;
+}
+header
+{
+    text-align: center;
+}
+.header
+{
+    font-size: 25px;
+    font-weight: bold;
+}
+.sub-header
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+main, header
+{
+    background-color: white;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 25px;
+}
+.col-6
+{
+    padding: 5px;
+}
+.col-7, .col-5
+{
+    padding: 0;
+    border: 0;
+}
+#go
+{
+    color: black;
+    text-decoration: none;
+    background-color: lightgray;
+    border: 2px outset black;
+    padding: 5px;
+    border-radius: 2px;
+}

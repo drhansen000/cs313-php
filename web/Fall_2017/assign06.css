@@ -1,0 +1,41 @@
+body
+{
+    text-align: center;
+    margin: auto;
+    max-width: 800px;
+    background-color: #D49A6A;
+}
+
+.pokemon
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.pokemon div
+{
+    margin: 1em;
+}
+#bulbasaur
+{
+    background-color: #55AA55;
+}
+#squirtle
+{
+    background-color: #407F7F;
+}
+#charmander
+{
+    background-color: #AA3939;
+}
+.subheader
+{
+    font-size: 1.5em;
+    padding-top: 1em;
+}
+footer
+{
+    text-align: left;
+    margin-left: 1em;
+    margin-bottom: 1em;
+}

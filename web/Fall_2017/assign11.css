@@ -1,0 +1,66 @@
+body
+{
+    text-align: center;
+    background-color: lightgray;
+}
+table
+{
+    margin:auto;
+    border: solid;
+}
+main, header
+{
+    margin-left: 16%;
+    margin-right: 16%;
+    background-color: white;
+}
+th, td
+{
+    border: solid;
+    padding: 5px;
+    font-size: 18px;
+}
+button
+{
+    cursor: pointer;
+    padding: 5px;
+    font-size: 16px;
+}
+input
+{
+    padding: 5px;
+    font-size: 14px;
+}
+p
+{
+    font-size: 22px;
+}
+.header
+{
+    font-size: 35px;
+     font-weight: bolder;
+}
+.sub-header
+{
+    font-size: 25px;
+    font-weight: bold;
+}
+header
+{
+    margin-bottom: -50px;
+}
+footer
+{
+    text-align: left;
+}
+#USA
+{
+    padding: 0;
+    border: 0;
+    margin-left: 16%;
+}
+p input:nth-child(even)
+{
+    width: 60px;
+}
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="col.css" />
+    <link rel="stylesheet" type="text/css" href="mortgage.css" />
+    <title>Mortgage Calculator</title>
+    <script type="text/javascript">
+        function setFocus() 
+        {
+            document.getElementById("apr").focus();
+        }
+    </script>
+</head>
+
+<body onload="setFocus()">
+    <header>
+        <div class="col-6" id="menu">
+            <ul>
+                <li><a href="mortgage.html">Mortgage Calculator</a></li>
+                <li><a href="assign09.html">Directory Listing</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="mortgage-calculator" class="col-6">
+        <form onreset="setFocus()" action="mortgage.php" method="get">
+            <h1>Mortgage Calculator</h1>
+            <hr/>
+            <div class="col-12">
+                <span class="col-5 prompt">APR:</span>
+                <input type="text" name="apr" class="col-4 box" id="apr" required/>
+            </div>
+            <div class="col-12">
+                <span class="col-5 prompt">Loan Term:</span>
+                <input type="text" name="term" class="col-4 " id="term" required/>
+            </div>
+            <div class="col-12">
+                <span class="col-5 prompt ">Loan Amount:</span>
+                <input type="text" name="amount" class="col-4 " id="amount" required/>
+            </div>
+
+            <div class="col-12 prompt" id="month">Monthly Payment: </div>
+            <div class="col-12">
+                <input type="reset" id="reset" />
+                <input type="submit" id="calculate" value="Calculate" />
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

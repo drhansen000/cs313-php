@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="col.css" />
+    <link rel="stylesheet" type="text/css" href="mortgage.css" />
+    <title>Directory Listing
+    </title>
+    <script type="text/javascript">
+        function displayDir() 
+        {
+            var httpRequest = new XMLHttpRequest();
+            httpRequest.onreadystatechange = function() 
+            {
+                if (this.readyState == 4 && this.status == 200) 
+                {
+                    var dirList = JSON.parse(this.responseText);
+                    var dirTable =
+                        "<tr><th>Filename</th><th>Type</th><th>CWD</th><th>Action</th></tr>";
+                    document.getElementById("directory-info").style.visibility = "visible";
+                    for(var i = 0; i < dirList.length; i++)
+                    {
+                        var change;
+                        if (dirList[i].fileType == "file")
+                            {
+                                
+                                change = "<a href=" + dirList[i].fileName + 
+                                    " target=_blank>Click to display</a>";
+                            }
+                        else
+                            {
+                                change = " ";
+                            }
+                        dirTable += "<tr><td>" + dirList[i].fileName + "</td><td>" + 
+                            dirList[i].fileType + "</td><td>" + 
+                            dirList[i].cwd + "</td>" + "<td>" + change + "</td></tr>";
+                    }
+                    document.getElementById("directory-info").innerHTML = dirTable;
+                } 
+                else if (this.readyState == 4)
+                {
+                    alert("Failure trying to open file. Status is: " + this.statusText);
+                }
+            };
+            httpRequest.open("GET", "assign09.php", true);
+            httpRequest.send();
+        }
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="col-6" id="menu">
+            <ul>
+                <li><a href="mortgage.html">Mortgage Calculator</a></li>
+                <li><a href="assign09.html">Directory Listing</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="col-6" id="directory-display">
+        <h2>Current Working Directory</h2>
+        <p>
+            Please click on the button provided below to see all the files 
+            in my cwd(current working directory).
+        </p>
+        <input type="button" value="Click Here" id="dir-button"
+               onclick="displayDir()"/>
+        <div id="directory-list" class="col-12">
+            <table id="directory-info">
+
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
