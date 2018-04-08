@@ -34,21 +34,21 @@
                     <span class="sr-only">Toggle Dropdown</span>
                   </a>
                   <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#TeaTree">Tea Tree</a>
-                      <a class="dropdown-item" href="#MarulaOil">Marula Oil</a>
-                      <a class="dropdown-item" href="#Awapuhi">Awapuhi</a>
-                      <a class="dropdown-item" href="#Original">Original</a>
-                      <a class="dropdown-item" href="#Strength">Strength</a>
-                      <a class="dropdown-item" href="#ColorCare">Color Care</a>
-                      <a class="dropdown-item" href="#Moisture">Moisture</a>
-                      <a class="dropdown-item" href="#Kids">Kids</a>
-                      <a class="dropdown-item" href="#Curls">Curls</a>
-                      <a class="dropdown-item" href="#NeuroLiquid">Neuro Liquid</a>
-                      <a class="dropdown-item" href="#Invisiblewear">Invisiblewear</a>
-                      <a class="dropdown-item" href="#Neon">Neon</a>
-                      <a class="dropdown-item" href="#Smoothing">Smoothing</a>
-                      <a class="dropdown-item" href="#Extra-Body">Extra-Body</a>
-                      <a class="dropdown-item" href="#Mitch">Mitch</a>
+                      <a class="dropdown-item" href="products.php#TeaTree">Tea Tree</a>
+                      <a class="dropdown-item" href="products.php#MarulaOil">Marula Oil</a>
+                      <a class="dropdown-item" href="products.php#Awapuhi">Awapuhi</a>
+                      <a class="dropdown-item" href="products.php#Original">Original</a>
+                      <a class="dropdown-item" href="products.php#Strength">Strength</a>
+                      <a class="dropdown-item" href="products.php#ColorCare">Color Care</a>
+                      <a class="dropdown-item" href="products.php#Moisture">Moisture</a>
+                      <a class="dropdown-item" href="products.php#Kids">Kids</a>
+                      <a class="dropdown-item" href="products.php#Curls">Curls</a>
+                      <a class="dropdown-item" href="products.php#NeuroLiquid">Neuro Liquid</a>
+                      <a class="dropdown-item" href="products.php#Invisiblewear">Invisiblewear</a>
+                      <a class="dropdown-item" href="products.php#Neon">Neon</a>
+                      <a class="dropdown-item" href="products.php#Smoothing">Smoothing</a>
+                      <a class="dropdown-item" href="products.php#Extra-Body">Extra-Body</a>
+                      <a class="dropdown-item" href="products.php#Mitch">Mitch</a>
                     <div class="dropdown-divider"></div>
                   </div>
                     </li>
